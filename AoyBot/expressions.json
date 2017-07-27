@@ -1,0 +1,780 @@
+{
+  "data" : [
+    {
+      "text" : "Are you open",
+      "entities" : [
+        {
+          "entity" : "operationHours",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "Are you open today",
+      "entities" : [
+        {
+          "entity" : "operationHours",
+          "value" : "\"True\""
+        },
+        {
+          "entity" : "operationHoursDay",
+          "value" : "\"today\"",
+          "start" : 13,
+          "end" : 18
+        }
+      ]
+    },
+    {
+      "text" : "Are you open tomorrow",
+      "entities" : [
+        {
+          "entity" : "operationHours",
+          "value" : "\"True\""
+        },
+        {
+          "entity" : "operationHoursDay",
+          "value" : "\"tomorrow\"",
+          "start" : 13,
+          "end" : 21
+        }
+      ]
+    },
+    {
+      "text" : "Book",
+      "entities" : [
+        {
+          "entity" : "book",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "Classes",
+      "entities" : [
+        {
+          "entity" : "classDetails",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "Events",
+      "entities" : [
+        {
+          "entity" : "events",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "Goodbye",
+      "entities" : [
+        {
+          "entity" : "goodbye",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "Hello",
+      "entities" : [
+        {
+          "entity" : "greeting",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "Help",
+      "entities" : [
+        {
+          "entity" : "Help",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "Hi",
+      "entities" : [
+        {
+          "entity" : "greeting",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "Human",
+      "entities" : [
+        {
+          "entity" : "Human",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "I need a human",
+      "entities" : [
+        {
+          "entity" : "Human",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "Monday"
+    },
+    {
+      "text" : "Navigation",
+      "entities" : [
+        {
+          "entity" : "navigation",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "No"
+    },
+    {
+      "text" : "See you",
+      "entities" : [
+        {
+          "entity" : "goodbye",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "Studio",
+      "entities" : [
+        {
+          "entity" : "directions",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "Take a bus",
+      "entities" : [
+        {
+          "entity" : "publictransport",
+          "value" : "\"True\""
+        },
+        {
+          "entity" : "publictransportType",
+          "value" : "\"bus\"",
+          "start" : 7,
+          "end" : 10
+        }
+      ]
+    },
+    {
+      "text" : "Thanks",
+      "entities" : [
+        {
+          "entity" : "thankyou",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "Trial Class",
+      "entities" : [
+        {
+          "entity" : "trialClass",
+          "value" : "\"True\"",
+          "start" : 0,
+          "end" : 11
+        }
+      ]
+    },
+    {
+      "text" : "Trial class",
+      "entities" : [
+        {
+          "entity" : "trialClass",
+          "value" : "\"True\"",
+          "start" : 0,
+          "end" : 11
+        }
+      ]
+    },
+    {
+      "text" : "Tuesday"
+    },
+    {
+      "text" : "What can you do",
+      "entities" : [
+        {
+          "entity" : "features",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "What can you do?"
+    },
+    {
+      "text" : "Yes"
+    },
+    {
+      "text" : "agenda",
+      "entities" : [
+        {
+          "entity" : "schedule",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "anyone there",
+      "entities" : [
+        {
+          "entity" : "anyoneThere",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "bye",
+      "entities" : [
+        {
+          "entity" : "goodbye",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "ciao",
+      "entities" : [
+        {
+          "entity" : "goodbye",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "class schedule",
+      "entities" : [
+        {
+          "entity" : "schedule",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "classes"
+    },
+    {
+      "text" : "closing time",
+      "entities" : [
+        {
+          "entity" : "operationHours",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "contac",
+      "entities" : [
+        {
+          "entity" : "contactDetails",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "contact",
+      "entities" : [
+        {
+          "entity" : "contactDetails",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "contact details",
+      "entities" : [
+        {
+          "entity" : "contactDetails",
+          "value" : "\"True\"",
+          "start" : 0,
+          "end" : 7
+        }
+      ]
+    },
+    {
+      "text" : "contacting you",
+      "entities" : [
+        {
+          "entity" : "contactDetails",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "directions",
+      "entities" : [
+        {
+          "entity" : "contactDetails",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "free class",
+      "entities" : [
+        {
+          "entity" : "trialClass",
+          "value" : "\"True\"",
+          "start" : 0,
+          "end" : 10
+        }
+      ]
+    },
+    {
+      "text" : "free parking ",
+      "entities" : [
+        {
+          "entity" : "parking",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "friday",
+      "entities" : [
+        {
+          "entity" : "operationHoursDay",
+          "value" : "\"friday\"",
+          "start" : 0,
+          "end" : 6
+        }
+      ]
+    },
+    {
+      "text" : "fuck",
+      "entities" : [
+        {
+          "entity" : "rude",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "good bye",
+      "entities" : [
+        {
+          "entity" : "goodbye",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "good morning"
+    },
+    {
+      "text" : "goodbye"
+    },
+    {
+      "text" : "hours",
+      "entities" : [
+        {
+          "entity" : "operationHours",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "how do i get there",
+      "entities" : [
+        {
+          "entity" : "contactDetails",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "how to contact you",
+      "entities" : [
+        {
+          "entity" : "contactDetails",
+          "value" : "\"True\"",
+          "start" : 7,
+          "end" : 14
+        }
+      ]
+    },
+    {
+      "text" : "how's things going?"
+    },
+    {
+      "text" : "location of studio",
+      "entities" : [
+        {
+          "entity" : "contactDetails",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "monday",
+      "entities" : [
+        {
+          "entity" : "operationHoursDay",
+          "value" : "\"monday\"",
+          "start" : 0,
+          "end" : 6
+        }
+      ]
+    },
+    {
+      "text" : "navigate",
+      "entities" : [
+        {
+          "entity" : "navigation",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "ni hao",
+      "entities" : [
+        {
+          "entity" : "greeting",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "opening hours",
+      "entities" : [
+        {
+          "entity" : "operationHours",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "opening time",
+      "entities" : [
+        {
+          "entity" : "operationHours",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "parking",
+      "entities" : [
+        {
+          "entity" : "parking",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "phone number",
+      "entities" : [
+        {
+          "entity" : "contactDetails",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "phonenumber",
+      "entities" : [
+        {
+          "entity" : "contactDetails",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "reserve",
+      "entities" : [
+        {
+          "entity" : "book",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "saturday",
+      "entities" : [
+        {
+          "entity" : "operationHoursDay",
+          "value" : "\"saturday\"",
+          "start" : 0,
+          "end" : 8
+        }
+      ]
+    },
+    {
+      "text" : "schedule",
+      "entities" : [
+        {
+          "entity" : "schedule",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "sunday",
+      "entities" : [
+        {
+          "entity" : "operationHoursDay",
+          "value" : "\"sunday\"",
+          "start" : 0,
+          "end" : 6
+        }
+      ]
+    },
+    {
+      "text" : "take a bus",
+      "entities" : [
+        {
+          "entity" : "publictransport",
+          "value" : "\"True\""
+        },
+        {
+          "entity" : "publictransportType",
+          "value" : "\"bus\"",
+          "start" : 7,
+          "end" : 10
+        }
+      ]
+    },
+    {
+      "text" : "take bus",
+      "entities" : [
+        {
+          "entity" : "publictransport",
+          "value" : "\"True\""
+        },
+        {
+          "entity" : "publictransportType",
+          "value" : "\"bus\"",
+          "start" : 5,
+          "end" : 8
+        }
+      ]
+    },
+    {
+      "text" : "take taxi",
+      "entities" : [
+        {
+          "entity" : "publictransport",
+          "value" : "\"True\""
+        },
+        {
+          "entity" : "publictransportType",
+          "value" : "\"taxi\"",
+          "start" : 5,
+          "end" : 9
+        }
+      ]
+    },
+    {
+      "text" : "teacher training",
+      "entities" : [
+        {
+          "entity" : "teacherTraining",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "teacher training courses",
+      "entities" : [
+        {
+          "entity" : "teacherTraining",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "thank you",
+      "entities" : [
+        {
+          "entity" : "thankyou",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "thanks",
+      "entities" : [
+        {
+          "entity" : "thankyou",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "thursday",
+      "entities" : [
+        {
+          "entity" : "operationHoursDay",
+          "value" : "\"thursday\"",
+          "start" : 0,
+          "end" : 8
+        }
+      ]
+    },
+    {
+      "text" : "trial class",
+      "entities" : [
+        {
+          "entity" : "trialClass",
+          "value" : "\"True\"",
+          "start" : 0,
+          "end" : 11
+        }
+      ]
+    },
+    {
+      "text" : "tuesday",
+      "entities" : [
+        {
+          "entity" : "operationHoursDay",
+          "value" : "\"tuesday\"",
+          "start" : 0,
+          "end" : 7
+        }
+      ]
+    },
+    {
+      "text" : "types of yoga"
+    },
+    {
+      "text" : "wednesday",
+      "entities" : [
+        {
+          "entity" : "operationHoursDay",
+          "value" : "\"wednesday\"",
+          "start" : 0,
+          "end" : 9
+        }
+      ]
+    },
+    {
+      "text" : "what are the contact details",
+      "entities" : [
+        {
+          "entity" : "contactDetails",
+          "value" : "\"True\""
+        },
+        {
+          "entity" : "contactDetails",
+          "value" : "\"True\"",
+          "start" : 13,
+          "end" : 20
+        }
+      ]
+    },
+    {
+      "text" : "what can you do",
+      "entities" : [
+        {
+          "entity" : "features",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "what can you do?"
+    },
+    {
+      "text" : "what is your email",
+      "entities" : [
+        {
+          "entity" : "contactDetails",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "what time",
+      "entities" : [
+        {
+          "entity" : "operationHours",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "what time do you close",
+      "entities" : [
+        {
+          "entity" : "operationHours",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "what time do you open",
+      "entities" : [
+        {
+          "entity" : "operationHours",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "what's up?"
+    },
+    {
+      "text" : "what's your name?"
+    },
+    {
+      "text" : "where is art of yoga",
+      "entities" : [
+        {
+          "entity" : "contactDetails",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "where is the studio",
+      "entities" : [
+        {
+          "entity" : "contactDetails",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "where to park",
+      "entities" : [
+        {
+          "entity" : "parking",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "who are you ?"
+    },
+    {
+      "text" : "your email address",
+      "entities" : [
+        {
+          "entity" : "contactDetails",
+          "value" : "\"True\""
+        }
+      ]
+    },
+    {
+      "text" : "your phone number",
+      "entities" : [
+        {
+          "entity" : "contactDetails",
+          "value" : "\"True\""
+        }
+      ]
+    }
+  ]
+}

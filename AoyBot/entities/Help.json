@@ -1,0 +1,18 @@
+{
+  "data" : {
+    "lookups" : [
+      "trait"
+    ],
+    "name" : "Help",
+    "lang" : "en",
+    "exotic" : false,
+    "id" : "Help",
+    "values" : [
+      {
+        "value" : "True"
+      }
+    ],
+    "doc" : "User-defined entity",
+    "builtin" : false
+  }
+}

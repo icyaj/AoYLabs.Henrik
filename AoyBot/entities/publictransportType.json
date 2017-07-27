@@ -1,0 +1,28 @@
+{
+  "data" : {
+    "lookups" : [
+      "free-text",
+      "keywords"
+    ],
+    "name" : "publictransportType",
+    "lang" : "en",
+    "exotic" : false,
+    "id" : "publictransportType",
+    "values" : [
+      {
+        "value" : "bus",
+        "expressions" : [
+          "bus"
+        ]
+      },
+      {
+        "value" : "taxi",
+        "expressions" : [
+          "taxi"
+        ]
+      }
+    ],
+    "doc" : "User-defined entity",
+    "builtin" : false
+  }
+}

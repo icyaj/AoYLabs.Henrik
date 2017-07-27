@@ -1,0 +1,23 @@
+{
+  "data" : {
+    "lookups" : [
+      "free-text",
+      "keywords",
+      "trait"
+    ],
+    "name" : "contactDetails",
+    "lang" : "en",
+    "exotic" : false,
+    "id" : "contactDetails",
+    "values" : [
+      {
+        "value" : "True",
+        "expressions" : [
+          "contact"
+        ]
+      }
+    ],
+    "doc" : "User-defined entity",
+    "builtin" : false
+  }
+}

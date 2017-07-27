@@ -1,0 +1,18 @@
+{
+  "data" : {
+    "lookups" : [
+      "trait"
+    ],
+    "name" : "publictransport",
+    "lang" : "en",
+    "exotic" : false,
+    "id" : "publictransport",
+    "values" : [
+      {
+        "value" : "True"
+      }
+    ],
+    "doc" : "User-defined entity",
+    "builtin" : false
+  }
+}

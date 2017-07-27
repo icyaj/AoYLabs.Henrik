@@ -1,0 +1,18 @@
+{
+  "data" : {
+    "lookups" : [
+      "trait"
+    ],
+    "name" : "navigation",
+    "lang" : "en",
+    "exotic" : false,
+    "id" : "navigation",
+    "values" : [
+      {
+        "value" : "True"
+      }
+    ],
+    "doc" : "User-defined entity",
+    "builtin" : false
+  }
+}

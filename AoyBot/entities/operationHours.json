@@ -1,0 +1,18 @@
+{
+  "data" : {
+    "lookups" : [
+      "trait"
+    ],
+    "name" : "operationHours",
+    "lang" : "en",
+    "exotic" : false,
+    "id" : "operationHours",
+    "values" : [
+      {
+        "value" : "True"
+      }
+    ],
+    "doc" : "User-defined entity",
+    "builtin" : false
+  }
+}

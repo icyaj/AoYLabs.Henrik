@@ -1,0 +1,8 @@
+{
+  "version" : 20160513,
+  "zip-command" : "zip AoyBot.zip AoyBot/app.json AoyBot/entities/*.json AoyBot/actions.json AoyBot/stories.json AoyBot/expressions.json",
+  "data" : {
+    "name" : "AoyBot",
+    "lang" : "en"
+  }
+}
