@@ -15,7 +15,7 @@ app.use(bodyParser.json())
 
 // Index route
 app.get('/', function (req, res) {
-	res.send('Hello world, I am Henrik - An AI powered chatbot using Wit.AI for Natural Language Processing') 
+	res.send('Hello world, I am a chat bot')
 })
 
 // for Facebook verification
@@ -30,3 +30,18 @@ app.get('/webhook/', function (req, res) {
 app.listen(app.get('port'), function() {
 	console.log('running on port', app.get('port'))
 })
+
+app.post('/webhook/', function (req, res) {
+    let messaging_events = req.body.entry[0].messaging
+    for (let i = 0; i < messaging_events.length; i++) {
+	    let event = req.body.entry[0].messaging[i]
+	    let sender = event.sender.id
+	    if (event.message && event.message.text) {
+		    let text = event.message.text
+		    sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
+	    }
+    }
+    res.sendStatus(200)
+})
+
+const token = "EAANo38HvfnoBAOwj2O4ZBVk5l5J9uJqcqvUpeIGZCRPonwHdirT7dcjbysxxtFNGNyMwLM5KD4zrtzZAUDrX5bBkcHFGoJfjWbTg48XYbebqablZAxnIbARUcMkJo1LH0ic71ErtthvZAE2ewaZC5LzbI7AsH835nHZCjTGtzOwDwZDZD"
