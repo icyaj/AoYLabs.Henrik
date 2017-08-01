@@ -10,9 +10,9 @@ if (!WIT_TOKEN) {
 const FB_PAGE_TOKEN = process.env.FB_PAGE_TOKEN;
 
 var FB_VERIFY_TOKEN = process.env.FB_VERIFY_TOKEN;
-if (!FB_VERIFY_TOKEN) {
-  FB_VERIFY_TOKEN = "aoybot2016!!l33tdawg";
-}
+//if (!FB_VERIFY_TOKEN) {
+//  FB_VERIFY_TOKEN = "aoybot2016!!l33tdawg";
+//}
 
 module.exports = {
   WIT_TOKEN: WIT_TOKEN,
