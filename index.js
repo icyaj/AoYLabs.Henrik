@@ -19,12 +19,6 @@ const express = require('express');
 const fetch = require('node-fetch');
 const request = require('request');
 
-module.exports = {
-  log: require('./lib/log'),
-  Wit: require('./lib/wit'),
-  interactive: require('./lib/interactive')
-};
-
 let Wit = null;
 let log = null;
 try {
