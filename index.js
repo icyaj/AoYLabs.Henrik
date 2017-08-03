@@ -36,6 +36,11 @@ const PORT = process.env.PORT || 8445;
 // Wit.ai parameters
 const WIT_TOKEN = process.env.WIT_TOKEN;
 
+// Index route
+app.get('/', function (req, res) {
+	res.send('Hello world, I am a chat bot')
+})
+
 // Messenger API parameters
 const FB_PAGE_TOKEN = process.env.FB_PAGE_TOKEN;
 if (!FB_PAGE_TOKEN) { throw new Error('missing FB_PAGE_TOKEN') }
