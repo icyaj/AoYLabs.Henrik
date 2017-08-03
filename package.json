@@ -7,6 +7,7 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "fetch": "^1.1.0",
+    "node-wit": "^4.3.0",
     "request": "^2.81.0"
   },
   "devDependencies": {},
