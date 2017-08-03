@@ -1,0 +1,28 @@
+{
+  "name": "aoylabs.henrik",
+  "version": "1.0.0",
+  "description": "Henrik FB ChatBot",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/icyaj289/AoYLabs.Henrik.git"
+  },
+  "keywords": [
+    "yoga"
+  ],
+  "author": "AJ Sung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/icyaj289/AoYLabs.Henrik/issues"
+  },
+  "homepage": "https://github.com/icyaj289/AoYLabs.Henrik#readme"
+}
