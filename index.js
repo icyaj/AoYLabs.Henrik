@@ -20,16 +20,10 @@ app.get('/', function (req, res) {
 
 // for Facebook verification
 app.get('/webhook/', function (req, res) {
-	if (req.query['req.verify_token'] === 'FB_VERIFY_TOKEN') {
+	if (req.query['hub.verify_token'] === 'FB_VERIFY_TOKEN') {
 		res.send(req.query['hub.challenge'])
 	}
 	res.send('BError, wrong token')
-})
-
-
-// Spin up the server
-app.listen(app.get('port'), function() {
-	console.log('running on port', app.get('port'))
 })
 
 app.post('/webhook/', function (req, res) {
@@ -65,3 +59,8 @@ function sendTextMessage(sender, text) {
 	    }
     })
 }
+
+// Spin up the server
+app.listen(app.get('port'), function() {
+	console.log('running on port', app.get('port'))
+})
