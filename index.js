@@ -23,7 +23,7 @@ app.get('/webhook/', function (req, res) {
 	if (req.query['hub.verify_token'] === 'FB_VERIFY_TOKEN') {
 		res.send(req.query['hub.challenge'])
 	}
-	res.send('Error, wrong token')
+	res.send('BError, wrong token')
 })
 
 
@@ -59,9 +59,9 @@ function sendTextMessage(sender, text) {
 		}
 	}, function(error, response, body) {
 		if (error) {
-		    console.log('Error sending messages: ', error)
+		    console.log('TError sending messages: ', error)
 		} else if (response.body.error) {
-		    console.log('Error: ', response.body.error)
+		    console.log('TError: ', response.body.error)
 	    }
     })
 }
