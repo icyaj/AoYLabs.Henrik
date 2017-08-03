@@ -4,6 +4,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const request = require('request')
 const app = express()
+var config = require('./const')
 
 app.set('port', (process.env.PORT || 5000))
 
@@ -20,7 +21,7 @@ app.get('/', function (req, res) {
 
 // for facebook to verify
 app.get('/webhook', function (req, res) {
-  if (req.query['hub.verify_token'] === const.FB_VERIFY_TOKEN) {
+  if (req.query['hub.verify_token'] === config.FB_VERIFY_TOKEN) {
     res.send(req.query['hub.challenge'])
   }
   res.send('BError, wrong token')
