@@ -24,7 +24,9 @@ app.get('/webhook', function (req, res) {
   if (req.query['hub.verify_token'] === 'aoybot2016!!l33tdawg') {
     res.send(req.query['hub.challenge'])
   }
+    else {
   res.send('BError, wrong token')
+    }
 })
 
 app.post('/webhook/', function (req, res) {
