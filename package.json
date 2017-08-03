@@ -2,7 +2,7 @@
   "name": "aoylabs.henrik",
   "version": "1.0.0",
   "description": "Henrik FB ChatBot",
-  "main": "index.js",
+  "main": "node index.js",
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
