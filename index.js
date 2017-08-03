@@ -19,12 +19,12 @@ app.get('/', function (req, res) {
 })
 
 // for Facebook verification
-app.get('/webhook/', function (req, res) {
-	if (req.query['hub.verify_token'] === 'FB_VERIFY_TOKEN') {
-		res.send(req.query['hub.challenge'])
-	}
-	res.send('BError, wrong token')
-})
+//app.get('/webhook/', function (req, res) {
+//	if (req.query['hub.verify_token'] === 'FB_VERIFY_TOKEN') {
+//		res.send(req.query['hub.challenge'])
+//	}
+//	res.send('BError, wrong token')
+//})
 
 app.post('/webhook/', function (req, res) {
     let messaging_events = req.body.entry[0].messaging
