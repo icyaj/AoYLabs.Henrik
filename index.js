@@ -21,7 +21,7 @@ app.get('/', function (req, res) {
 
 // for facebook to verify
 app.get('/webhook', function (req, res) {
-  if (req.query['hub.verify_token'] === 'aoybot2016!!l33tdawg') {
+  if (req.query['hub.verify_token'] === 'b89212959f1b4ade8a4ce0d7703d5591') {
     res.send(req.query['hub.challenge'])
   }
     else {
