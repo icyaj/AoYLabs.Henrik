@@ -153,7 +153,7 @@ app.get('/webhook', (req, res) => {
     req.query['hub.verify_token'] === FB_VERIFY_TOKEN) {
     res.send(req.query['hub.challenge']);
   } else {
-    res.sendStatus(400);
+    res.sendStatus(500);
   }
 });
 
