@@ -42,13 +42,9 @@ if (!FB_PAGE_TOKEN) { throw new Error('missing FB_PAGE_TOKEN') }
 const FB_APP_SECRET = process.env.FB_APP_SECRET;
 if (!FB_APP_SECRET) { throw new Error('missing FB_APP_SECRET') }
 
-let FB_VERIFY_TOKEN = null;
-crypto.randomBytes(8, (err, buff) => {
-  if (err) throw err;
-  FB_VERIFY_TOKEN = buff.toString('hex');
-  console.log(`/webhook will accept the Verify Token "${FB_VERIFY_TOKEN}"`);
-});
-
+const FB_VERIFY_TOKEN = process.env.FB_VERIFY_TOKEN;
+if (!FB_VERIFY_TOKEN) { throw new Error('missing FB_VERIFY_TOKEN') }
+                                        
 // ----------------------------------------------------------------------------
 // Messenger API specific code
 
@@ -149,16 +145,14 @@ app.use(bodyParser.json({ verify: verifyRequestSignature }));
 
 // Webhook setup
 app.get('/webhook', (req, res) => {
-  if (req.query['hub.mode'] === 'subscribe' &&
-    req.query['hub.verify_token'] === FB_VERIFY_TOKEN) {
-    res.send(req.query['hub.challenge']);
-    console.log("Works");
+  if (req.query['hub.verify_token'] === FB_VERIFY_TOKEN)   {
+      res.send(req.query['hub.challenge']);
   } else {
-    console.log("hub.mode: ", (req.query['hub.mode'] === 'subscribe'));
-    console.log("hub.verify_token: ", (req.query['hub.verify_token'] === FB_VERIFY_TOKEN), FB_VERIFY_TOKEN);
-    res.sendStatus(500);
+    res.sendStatus(400);
   }
 });
+
+
 
 // Index route
 app.get('/', function (req, res) {
