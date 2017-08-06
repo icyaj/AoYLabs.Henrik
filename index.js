@@ -71,6 +71,28 @@ const fbMessage = (id, text) => {
   });
 };
 
+// Custom Code
+
+const fbRichMessage = (id, json) => {
+//  const body = JSON.stringify({
+//    recipient: { id },
+//    message: { text },
+//  });
+  const qs = 'access_token=' + encodeURIComponent(FB_PAGE_TOKEN);
+  return fetch('https://graph.facebook.com/me/messages?' + qs, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    json,
+  })
+  .then(rsp => rsp.json())
+  .then(json => {
+    if (json.error && json.error.message) {
+      throw new Error(json.error.message);
+    }
+    return json;
+  });
+};
+
 // ----------------------------------------------------------------------------
 // Wit.ai bot specific code
 
@@ -124,6 +146,8 @@ const actions = {
   },
   // You should implement your custom actions here
   // See https://wit.ai/docs/quickstart
+    
+  // MY CUSTOM CODE
 };
 
 // Setting up our bot
