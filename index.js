@@ -74,14 +74,13 @@ const fbMessage = (id, text) => {
 // Custom Code
 
 const fbRichMessage = (id, json) => {
-  var recipient = { recipient: id };
-  var body = Object.assign({JSON.stringify(
-    recipient: { id },}), json);
+  var recipient = "'recipient':{'id':${id}},"; 
+  console.log recipient;
   const qs = 'access_token=' + encodeURIComponent(FB_PAGE_TOKEN);
   return fetch('https://graph.facebook.com/me/messages?' + qs, {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
-    body,
+    recipient,json,
   })
   .then(rsp => rsp.json())
   .then(json => {
