@@ -143,7 +143,7 @@ const actions = {
       // Giving the wheel back to our bot
       return Promise.resolve()
     }
-  5,
+  ,
   // You should implement your custom actions here
   // See https://wit.ai/docs/quickstart
     
