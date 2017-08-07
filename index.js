@@ -55,7 +55,6 @@ const fbMessage = (id, text) => {
   const body = JSON.stringify({
     recipient: { id },
     message: { text },
-    console.log(text),
   });
   const qs = 'access_token=' + encodeURIComponent(FB_PAGE_TOKEN);
   return fetch('https://graph.facebook.com/me/messages?' + qs, {
@@ -75,15 +74,13 @@ const fbMessage = (id, text) => {
 // Custom Code
 
 const fbRichMessage = (id, json) => {
-//  const body = JSON.stringify({
-//    recipient: { id },
-//    message: { text },
-//  });
+  var recipient = { recipient: id };
+  var body = Object.assign(recipient, json);
   const qs = 'access_token=' + encodeURIComponent(FB_PAGE_TOKEN);
   return fetch('https://graph.facebook.com/me/messages?' + qs, {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
-    json,
+    body,
   })
   .then(rsp => rsp.json())
   .then(json => {
@@ -155,7 +152,7 @@ const actions = {
   Welcome(text) {
     console.log('WelcomeCard', recipientId)
     var text = "'message':{'attachment':{'type':'template','payload':{'template_type':'generic','elements':[{'title':'Art of Yoga - A Boutique Yoga Studio in Singapore's East Coast ','image_url':'https://artofyoga.sg/wp-content/uploads/2017/02/AoY-Fullsize-0294.jpg','subtitle':'We offer a variety of yoga classes including Ashtanga, Hatha, Pre-Natal and more','default_action': {'type': 'web_url','url': 'https://www.instagram.com/p/rYlPzKtOqJ/','messenger_extensions': true,'webview_height_ratio': 'tall'','fallback_url': 'https://www.instagram.com/artofyogasg/'},'buttons':[{'type':'web_url','url':'https://artofyoga.sg','title':'AoY Website'}]}]}}}"
-    //fbRichMessage(recipientId, text);
+    fbRichMessage(recipientId, text);
   },
     
 };
