@@ -75,7 +75,7 @@ const fbMessage = (id, text) => {
 
 const fbRichMessage = (id, json) => {
   var recipient = "'recipient':{'id':${id}},"; 
-  console.log recipient;
+  console.log(recipient);
   const qs = 'access_token=' + encodeURIComponent(FB_PAGE_TOKEN);
   return fetch('https://graph.facebook.com/me/messages?' + qs, {
     method: 'POST',
