@@ -148,6 +148,13 @@ const actions = {
   // See https://wit.ai/docs/quickstart
     
   // MY CUSTOM CODE
+  
+  Welcome(recipientId, text) {
+  // implement logic here to display a view of appointments
+    console.log('WelcomeCard');
+  },
+    //fbRichMessage(recipientId, text)
+    
 };
 
 // Setting up our bot
