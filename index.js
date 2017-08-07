@@ -143,7 +143,7 @@ const actions = {
       // Giving the wheel back to our bot
       return Promise.resolve()
     }
-  ,
+  },
   // You should implement your custom actions here
   // See https://wit.ai/docs/quickstart
     
@@ -151,9 +151,8 @@ const actions = {
   
   // Welcome Msg after 'Hello'
   Welcome(recipientId, text) {
-    console.log('WelcomeCard');
-    console.log(recipientId);
-    var text = "'message':{'attachment':{'type':'template','payload':{'template_type':'generic','elements':[{'title':'Art of Yoga - A Boutique Yoga Studio in Singapore's East Coast ','image_url':'https://artofyoga.sg/wp-content/uploads/2017/02/AoY-Fullsize-0294.jpg','subtitle':'We offer a variety of yoga classes including Ashtanga, Hatha, Pre-Natal and more','default_action': {'type': 'web_url','url': 'https://www.instagram.com/p/rYlPzKtOqJ/','messenger_extensions': true,'webview_height_ratio': 'tall'','fallback_url': 'https://www.instagram.com/artofyogasg/'},'buttons':[{'type':'web_url','url':'https://artofyoga.sg','title':'AoY Website'}]}]}}}";
+    console.log('WelcomeCard', recipientId);
+    var text = "'message':{'attachment':{'type':'template','payload':{'template_type':'generic','elements':[{'title':'Art of Yoga - A Boutique Yoga Studio in Singapore's East Coast ','image_url':'https://artofyoga.sg/wp-content/uploads/2017/02/AoY-Fullsize-0294.jpg','subtitle':'We offer a variety of yoga classes including Ashtanga, Hatha, Pre-Natal and more','default_action': {'type': 'web_url','url': 'https://www.instagram.com/p/rYlPzKtOqJ/','messenger_extensions': true,'webview_height_ratio': 'tall'','fallback_url': 'https://www.instagram.com/artofyogasg/'},'buttons':[{'type':'web_url','url':'https://artofyoga.sg','title':'AoY Website'}]}]}}}"
     fbRichMessage(recipientId, text);
   },
     
