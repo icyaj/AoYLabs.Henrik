@@ -75,7 +75,7 @@ const fbMessage = (id, text) => {
 // Custom Code
 
 const fbRichMessage = (id, json) => {
-  var recipient = "'recipient':{'id':'1337595769686359'},"; 
+  var recipient = '"recipient":{"id":"1337595769686359"},'; 
   var body = "{" + recipient + json + "}";
   console.log(body);
   console.log(recipient);
