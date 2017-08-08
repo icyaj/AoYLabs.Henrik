@@ -86,11 +86,12 @@ const fbRichMessage = (id, json) => {
     body,
   })
   .then(rsp => rsp.json())
-  .then(json => {
+  .then(responseJson => {
     if (json.error && json.error.message) {
       throw new Error(json.error.message);
     }
-    return json;
+    console.log(responseJson);
+    return responseJson;
   });
 };
 
