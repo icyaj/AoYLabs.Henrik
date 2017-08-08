@@ -79,18 +79,11 @@ const fbRichMessage = (id, json) => {
   //console.log(body);
   //console.log(recipient);
   const qs = 'access_token=' + encodeURIComponent(FB_PAGE_TOKEN);
-  console.log(('https://graph.facebook.com/me/messages?' + qs, {
+  console.log('https://graph.facebook.com/me/messages?' + qs, {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body,
-  }))
-  .then(rsp => rsp.json())
-  .then(json => {
-    if (json.error && json.error.message) {
-      throw new Error(json.error.message);
-    }
-    return json;
-  });
+  })
 };
 
 // ----------------------------------------------------------------------------
