@@ -75,7 +75,7 @@ const fbMessage = (id, text) => {
 
 const fbRichMessage = (id, json) => {
   var recipient = "'recipient':{'id':'1337595769686359'},"; 
-  var body = recipient + json;
+  var body = "{" + recipient + json "}";
   console.log(body);
   console.log(recipient);
   const qs = 'access_token=' + encodeURIComponent(FB_PAGE_TOKEN);
