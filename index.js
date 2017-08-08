@@ -56,7 +56,6 @@ const fbMessage = (id, text) => {
     recipient: { id },
     message: { text },
   });
-  console.log("Body: " + body);
   const qs = 'access_token=' + encodeURIComponent(FB_PAGE_TOKEN);
   return fetch('https://graph.facebook.com/me/messages?' + qs, {
     method: 'POST',
@@ -68,6 +67,7 @@ const fbMessage = (id, text) => {
     if (json.error && json.error.message) {
       throw new Error(json.error.message);
     }
+    console.lgo(json);
     return json;
   });
 };
