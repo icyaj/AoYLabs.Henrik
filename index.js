@@ -56,6 +56,7 @@ const fbMessage = (id, text) => {
     recipient: { id },
     message: { text },
   });
+  console.log("Body: " + body);
   const qs = 'access_token=' + encodeURIComponent(FB_PAGE_TOKEN);
   return fetch('https://graph.facebook.com/me/messages?' + qs, {
     method: 'POST',
@@ -76,14 +77,21 @@ const fbMessage = (id, text) => {
 const fbRichMessage = (id, json) => {
   var recipient = "'recipient':{'id':'1337595769686359'},"; 
   var body = "{" + recipient + json + "}";
-  //console.log(body);
-  //console.log(recipient);
+  console.log(body);
+  console.log(recipient);
   const qs = 'access_token=' + encodeURIComponent(FB_PAGE_TOKEN);
-  console.log('https://graph.facebook.com/me/messages?' + qs, {
+  return fetch('https://graph.facebook.com/me/messages?' + qs, {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body,
   })
+  .then(rsp => rsp.json())
+  .then(json => {
+    if (json.error && json.error.message) {
+      throw new Error(json.error.message);
+    }
+    return json;
+  });
 };
 
 // ----------------------------------------------------------------------------
