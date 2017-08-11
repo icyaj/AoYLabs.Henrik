@@ -175,8 +175,8 @@ const actions = {
     fbRichMessage(recipientId, text);
     
     // Check if open 
-    var moment = require('moment');
-    console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
+    var moment = require('moment-timezone');
+    console.log(moment().tz("Asia/Singapore").format());
   },
     
   // Ok
