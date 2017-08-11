@@ -173,11 +173,26 @@ const actions = {
     
     // Check if open 
     var moment = require('moment-timezone');
-    console.log(moment().tz("Asia/Singapore").format());
-    console.log(moment().tz("Asia/Singapore").weekday()); 
+    //console.log(moment().tz("Asia/Singapore").format());  
+    
+    // Sets Day, Hour, Minute & open 
+    var day = moment().tz("Asia/Singapore").weekday()  
+    var Hour = moment().tz("Asia/Singapore").hour();
+    var Minute = moment()tz("Asia/Singapore").minute();
+    var isOpen = false;
+    
+    // Checks if Open
+    switch (day) {
+    case(day >= 0 && day <= 5):
+        if (Hour >= 6 && Hour <= 21) { var isOpen = true; }
+    case(day >= 6 && day <= 7) :
+        if ((Hour >= 8 && Hour <= 17) || (Hour == 7 && Minute >= 30)) { var isOpen = true; }
+    }; 
+    if isOpen = true { open = 'Currently Open';} else { open = 'Currently Closed'};
+    console.log(open);
       
     var recipientId = 1337595769686359;
-    var text = '"message":{"attachment":{"type":"template","payload":{"template_type":"generic","elements":[{"title":"Art of Yoga - Operating Hours","image_url":"https://artofyoga.sg/wp-content/uploads/2015/11/16998817_1090435211063008_2620425424784904845_n.jpg","subtitle":"Monday - Friday: 6am - 9pm \\n Saturday & Sunday: 7:30am - 5pm","default_action": {"type": "web_url","url": "https://artofyoga.sg","messenger_extensions": true,"webview_height_ratio": "tall","fallback_url": "https://artofyoga.sg"}}]}}}';
+    var text = '"message":{"attachment":{"type":"template","payload":{"template_type":"generic","elements":[{"title":"Art of Yoga - Operating Hours","image_url":"https://artofyoga.sg/wp-content/uploads/2015/11/16998817_1090435211063008_2620425424784904845_n.jpg","subtitle":"Monday - Friday: 6am - 9pm \\n Saturday & Sunday: 7:30am - 5pm \\n Currently ${open}","default_action": {"type": "web_url","url": "https://artofyoga.sg","messenger_extensions": true,"webview_height_ratio": "tall","fallback_url": "https://artofyoga.sg"}}]}}}';
     fbRichMessage(recipientId, text);
 
   },
