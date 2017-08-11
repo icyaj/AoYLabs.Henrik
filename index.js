@@ -172,9 +172,9 @@ const actions = {
     console.log('Operating Hours Card')
     
     // Check if open 
-    var moment = require('moment-timezone').tz("Asia/Singapore");
-    console.log(moment().format());
-    console.log(moment().weekday()); 
+    var moment = require('moment-timezone');
+    console.log(moment().tz("Asia/Singapore").format());
+    console.log(moment().tz("Asia/Singapore").weekday()); 
       
     var recipientId = 1337595769686359;
     var text = '"message":{"attachment":{"type":"template","payload":{"template_type":"generic","elements":[{"title":"Art of Yoga - Operating Hours","image_url":"https://artofyoga.sg/wp-content/uploads/2015/11/16998817_1090435211063008_2620425424784904845_n.jpg","subtitle":"Monday - Friday: 6am - 9pm \\n Saturday & Sunday: 7:30am - 5pm","default_action": {"type": "web_url","url": "https://artofyoga.sg","messenger_extensions": true,"webview_height_ratio": "tall","fallback_url": "https://artofyoga.sg"}}]}}}';
