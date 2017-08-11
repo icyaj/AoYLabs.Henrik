@@ -188,7 +188,7 @@ const actions = {
     case(day >= 6 && day <= 7) :
         if ((Hour >= 8 && Hour <= 17) || (Hour == 7 && Minute >= 30)) { var isOpen = true; }
     }; 
-    if isOpen = true { open = 'Currently Open';} else { open = 'Currently Closed'};
+    if isOpen == true { open = 'Currently Open';} else { open = 'Currently Closed'};
     console.log(open);
       
     var recipientId = 1337595769686359;
