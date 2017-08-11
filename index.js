@@ -178,7 +178,7 @@ const actions = {
     // Sets Day, Hour, Minute & open 
     var day = moment().tz("Asia/Singapore").weekday()  
     var Hour = moment().tz("Asia/Singapore").hour();
-    var Minute = moment()tz("Asia/Singapore").minute();
+    var Minute = moment().tz("Asia/Singapore").minute();
     var isOpen = false;
     
     // Checks if Open
