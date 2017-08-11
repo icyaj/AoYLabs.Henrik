@@ -179,7 +179,7 @@ const actions = {
   Ok(text) {
     console.log('Ok Card')
     var recipientId = 1337595769686359;
-    var text = '"message":{"text":"Okay. If there\'s something else I can help you with, just ask me or type \'help\'."}';
+    var text = '"message":{"text":"Let me know if there\'s something else I can help you with!"}';
     fbRichMessage(recipientId, text);
   },
     
