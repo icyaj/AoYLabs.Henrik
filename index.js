@@ -177,7 +177,7 @@ const actions = {
     // Check if open
     var date = new Date();
     var current_hour = date.getHours(); 
-    console.log(date, current_hour);
+    console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
   },
     
   // Ok
