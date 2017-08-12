@@ -153,11 +153,10 @@ const actions = {
   // See https://wit.ai/docs/quickstart
     
   // MY CUSTOM CODE
-  const sessionId = findOrCreateSession(sender);
     
   // Welcome Msg after 'Hello'
   Welcome(text) {
-    console.log('Sessions: ', sessionId);
+    console.log('Sessions: ', sessions[sessionId]);
     console.log('Welcome Card');
     //var recipientId = 1337595769686359;
     var text = '"message":{"attachment":{"type":"template","payload":{"template_type":"generic","elements":[{"title":"Art of Yoga - A Boutique Yoga Studio in Singapore\'s East Coast ","image_url":"https://artofyoga.sg/wp-content/uploads/2017/02/AoY-Fullsize-0294.jpg","subtitle":"We offer a variety of yoga classes including Ashtanga, Hatha, Pre-Natal and more","default_action": {"type": "web_url","url": "https://www.instagram.com/p/rYlPzKtOqJ/","messenger_extensions": true,"webview_height_ratio": "tall","fallback_url": "https://www.instagram.com/artofyogasg/"},"buttons":[{"type":"web_url","url":"https://artofyoga.sg","title":"AoY Website"}]}]}}}';
