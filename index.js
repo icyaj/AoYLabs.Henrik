@@ -188,7 +188,9 @@ const actions = {
     console.log(hour,day);
     switch (day) {
     case(day >= 0 && day <= 5):
-        if (hour >= 6 && hour <= 21) {isOpen = true; } else { console.log('Nahh Not open');};
+        console.log('Works');
+        break;
+        //if (hour >= 6 && hour <= 21) {isOpen = true; } else { console.log('Nahh Not open');};
     case(day >= 6 && day <= 7) :
         if ((hour >= 8 && hour <= 17) || (hour == 7 && minute >= 30)) {isOpen = true; console.log('True'); };
     }; 
@@ -203,10 +205,10 @@ const actions = {
     
   // Ok
   Ok(text) {
-    console.log('Ok Card')
+    //console.log('Ok Card')
     var recipientId = 1337595769686359;
     var text = '"message":{"text":"Let me know if there\'s something else I can help you with!"}';
-    sleep.sleep(3);
+    //sleep.sleep(3);
     //fbRichMessage(recipientId, text);
   },
     
