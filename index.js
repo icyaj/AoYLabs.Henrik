@@ -188,7 +188,7 @@ const actions = {
     case(day >= 0 && day <= 5):
         if (Hour >= 6 && Hour <= 21) { var isOpen = true; }
     case(day >= 6 && day <= 7) :
-        if ((Hour >= 8 && Hour <= 17) || (Hour == 7 && Minute >= 30)) { var isOpen = true; }
+        if ((Hour >= 8 && Hour <= 17) || (Hour == 7 && Minute >= 30)) { var isOpen = true; console.log('True'); }
     }; 
     if (isOpen == true) {var open = 'Currently Open';} else {var open = 'Currently Closed'};
     console.log(isOpen, ' // ',open);
