@@ -156,7 +156,7 @@ const actions = {
     
   // Welcome Msg after 'Hello'
   Welcome(text) {
-    var recipientId = typeof(sessions[text.sessionId]);
+    var recipientId = sessions[text.sessionId].fbid;
     console.log('Sessions: ', recipientId);
     console.log('Welcome Card');
     var recipientId = 1337595769686359;
