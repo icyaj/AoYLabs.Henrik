@@ -18,6 +18,7 @@ const crypto = require('crypto');
 const express = require('express');
 const fetch = require('node-fetch');
 const request = require('request');
+const sleep = require('sleep');
 
 let Wit = null;
 let log = null;
@@ -202,6 +203,7 @@ const actions = {
     console.log('Ok Card')
     var recipientId = 1337595769686359;
     var text = '"message":{"text":"Let me know if there\'s something else I can help you with!"}';
+    sleep.sleep(3);
     fbRichMessage(recipientId, text);
   },
     

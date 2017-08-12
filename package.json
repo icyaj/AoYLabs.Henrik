@@ -10,7 +10,8 @@
     "moment": "^2.18.1",
     "moment-timezone": "^0.5.13",
     "node-wit": "^4.3.0",
-    "request": "^2.81.0"
+    "request": "^2.81.0",
+    "sleep": "^5.1.1"
   },
   "devDependencies": {},
   "scripts": {
