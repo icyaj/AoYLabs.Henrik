@@ -187,9 +187,9 @@ const actions = {
     console.log(hour,day);
     switch (day) {
     case(day >= 0 && day <= 5):
-        if (hour >= 6 && hour <= 21) { var isOpen = true; }
+        if (hour >= 6 && hour <= 21) { var isOpen = true; };
     case(day >= 6 && day <= 7) :
-        if ((hour >= 8 && hour <= 17) || (hour == 7 && minute >= 30)) { var isOpen = true; console.log('True'); }
+        if ((hour >= 8 && hour <= 17) || (hour == 7 && minute >= 30)) { var isOpen = true; console.log('True'); };
     }; 
     if (isOpen == true) {var open = 'Currently Open';} else {var open = 'Currently Closed'};
     console.log(isOpen, ' // ',open);
