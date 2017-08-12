@@ -180,12 +180,16 @@ const actions = {
     var day = moment().tz("Asia/Singapore").weekday();  
     var Hour = moment().tz("Asia/Singapore").hour();
     var minute = moment().tz("Asia/Singapore").minute();
-    var isOpen = false;
  
     // Logic to Test if Open or Closed.
     //console.log(hour,day);
-    if ((day >= 0 && day <= 5) && (hour >= 6 && hour <= 21)) { isOpen = true; }
-      else if ((day >= 6 && day <= 7) && ((hour >= 8 && hour <= 17) || (hour === 7 && minute >= 30))) { isOpen = true; };
+    if ((day >= 0 && day <= 5) && (hour >= 6 && hour <= 21)) {
+        var isOpen = true; 
+    } else if ((day >= 6 && day <= 7) && ((hour >= 8 && hour <= 17) || (hour === 7 && minute >= 30))) {
+        var isOpen = true; 
+    } else {
+        var isOpen = false;
+    }
     if (isOpen === true) {var open = 'Currently Open'; } else {var open = 'Currently Closed'; }
     //console.log(open);
       
