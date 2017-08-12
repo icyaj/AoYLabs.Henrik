@@ -153,7 +153,8 @@ const actions = {
   // See https://wit.ai/docs/quickstart
     
   // MY CUSTOM CODE
-  
+  const sessionId = findOrCreateSession(sender);
+    
   // Welcome Msg after 'Hello'
   Welcome(text) {
     console.log('Sessions: ', sessionId);
