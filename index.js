@@ -128,6 +128,7 @@ const actions = {
     // Our bot has something to say!
     // Let's retrieve the Facebook user whose session belongs to
     const recipientId = sessions[sessionId].fbid;
+    console.log('Sup: ', recipientId);
     if (recipientId) {
       // Yay, we found our recipient!
       // Let's forward our bot response to her.
@@ -155,7 +156,7 @@ const actions = {
   
   // Welcome Msg after 'Hello'
   Welcome(text) {
-    console.log('Sessions: ', text.sessionId[fbid]);
+    console.log('Sessions: ', text.sessionId);
     console.log('Welcome Card');
     //var recipientId = 1337595769686359;
     var text = '"message":{"attachment":{"type":"template","payload":{"template_type":"generic","elements":[{"title":"Art of Yoga - A Boutique Yoga Studio in Singapore\'s East Coast ","image_url":"https://artofyoga.sg/wp-content/uploads/2017/02/AoY-Fullsize-0294.jpg","subtitle":"We offer a variety of yoga classes including Ashtanga, Hatha, Pre-Natal and more","default_action": {"type": "web_url","url": "https://www.instagram.com/p/rYlPzKtOqJ/","messenger_extensions": true,"webview_height_ratio": "tall","fallback_url": "https://www.instagram.com/artofyogasg/"},"buttons":[{"type":"web_url","url":"https://artofyoga.sg","title":"AoY Website"}]}]}}}';
