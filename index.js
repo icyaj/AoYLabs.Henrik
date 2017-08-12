@@ -70,7 +70,7 @@ const fbMessage = (id, text) => {
     if (json.error && json.error.message) {
       throw new Error(json.error.message);
     }
-    console.log(json);
+    //console.log(json);
     return json;
   });
 };
@@ -80,8 +80,7 @@ const fbMessage = (id, text) => {
 const fbRichMessage = (id, json) => {
   var recipient = '"recipient":{"id":"1337595769686359"},'; 
   var body = "{" + recipient + json + "}";
-  console.log(body);
-  console.log(recipient);
+  //console.log(body + '\n' + recipient);
   const qs = 'access_token=' + encodeURIComponent(FB_PAGE_TOKEN);
   return fetch('https://graph.facebook.com/me/messages?' + qs, {
     method: 'POST',
@@ -93,7 +92,7 @@ const fbRichMessage = (id, json) => {
     if (json.error && json.error.message) {
       throw new Error(json.error.message);
     }
-    console.log(responseJson);
+    //console.log(responseJson);
     return responseJson;
   });
 };
