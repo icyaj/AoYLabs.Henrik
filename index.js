@@ -78,7 +78,7 @@ const fbMessage = (id, text) => {
 // Custom Code
 
 const fbRichMessage = (id, json) => {
-  var recipient = '"recipient":{"id":"1337595769686359"},'; 
+  var recipient = '"recipient":{"id":"' + id + '"},'; 
   var body = "{" + recipient + json + "}";
   //console.log(body + '\n' + recipient);
   const qs = 'access_token=' + encodeURIComponent(FB_PAGE_TOKEN);
@@ -156,10 +156,8 @@ const actions = {
     
   // Welcome Msg after 'Hello'
   Welcome(text) {
-    var recipientId = sessions[text.sessionId].fbid;
-    console.log('Sessions: ', recipientId);
     console.log('Welcome Card');
-    var recipientId = 1337595769686359;
+    var recipientId = sessions[text.sessionId].fbid;
     var text = '"message":{"attachment":{"type":"template","payload":{"template_type":"generic","elements":[{"title":"Art of Yoga - A Boutique Yoga Studio in Singapore\'s East Coast ","image_url":"https://artofyoga.sg/wp-content/uploads/2017/02/AoY-Fullsize-0294.jpg","subtitle":"We offer a variety of yoga classes including Ashtanga, Hatha, Pre-Natal and more","default_action": {"type": "web_url","url": "https://www.instagram.com/p/rYlPzKtOqJ/","messenger_extensions": true,"webview_height_ratio": "tall","fallback_url": "https://www.instagram.com/artofyogasg/"},"buttons":[{"type":"web_url","url":"https://artofyoga.sg","title":"AoY Website"}]}]}}}';
     fbRichMessage(recipientId, text);
   },
@@ -167,7 +165,7 @@ const actions = {
   // Contact Us / Directions
   Directions(text) {
     console.log('Directions Card');
-    var recipientId = 1337595769686359;
+    var recipientId = sessions[text.sessionId].fbid;
     var text = '"message":{"attachment":{"type":"template","payload":{"template_type":"generic","elements":[{"title":"Art of Yoga - Contact Us / Directions","image_url":"https://artofyoga.sg/wp-content/uploads/2015/11/1.jpg","subtitle":"121 Upper East Coast Road, #02-01","default_action": {"type": "web_url","url": "https://artofyoga.sg","messenger_extensions": true,"webview_height_ratio": "tall","fallback_url": "https://artofyoga.sg"},"buttons":[{"type":"web_url","url":"https://artofyoga.sg/contact/","title":"Contact"},{"type":"web_url","url":"https://www.google.com/maps/place/Art+of+Yoga/@1.3135891,103.9294062,15z/data=!4m5!3m4!1s0x0:0x15092c1c80eb83bb!8m2!3d1.3135891!4d103.9294062","title":"Directions"}]}]}}}';
     fbRichMessage(recipientId, text);
   },
@@ -195,7 +193,7 @@ const actions = {
     if (isOpen === true) {var open = 'Currently Open'; } else {var open = 'Currently Closed'; }
     //console.log(open);
       
-    var recipientId = 1337595769686359;
+    var recipientId = sessions[text.sessionId].fbid;
     var text = '"message":{"attachment":{"type":"template","payload":{"template_type":"generic","elements":[{"title":"Art of Yoga - Operating Hours","image_url":"https://artofyoga.sg/wp-content/uploads/2015/11/16998817_1090435211063008_2620425424784904845_n.jpg","subtitle":"Monday - Friday: 6am - 9pm \\nSaturday & Sunday: 7:30am - 5pm \\n' + open + '","default_action": {"type": "web_url","url": "https://artofyoga.sg","messenger_extensions": true,"webview_height_ratio": "tall","fallback_url": "https://artofyoga.sg"}}]}}}';
     fbRichMessage(recipientId, text);
 
@@ -204,7 +202,7 @@ const actions = {
   // Ok
   Ok(text) {
     console.log('Ok Card');
-    var recipientId = 1337595769686359;
+    var recipientId = sessions[text.sessionId].fbid;
     var text = '"message":{"text":"Let me know if there\'s something else I can help you with!"}';
     sleep.sleep(3);
     fbRichMessage(recipientId, text);
