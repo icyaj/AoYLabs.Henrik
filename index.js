@@ -188,7 +188,7 @@ const actions = {
     console.log(hour,day);
     switch (day) {
     case(day >= 0 && day <= 5):
-        if (hour >= 6 && hour <= 21) {isOpen = true; };
+        if (hour >= 6 && hour <= 21) {isOpen = true; } else { console.log('Nahh Not open'))};
     case(day >= 6 && day <= 7) :
         if ((hour >= 8 && hour <= 17) || (hour == 7 && minute >= 30)) {isOpen = true; console.log('True'); };
     }; 
