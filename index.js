@@ -187,7 +187,7 @@ const actions = {
     // Checks if Open
     console.log(hour,day);
     switch (day) {
-    case(day >= 0 && day <= 5):
+    case((day >= 0) && (day <= 5)):
         console.log('Works');
         break;
         //if (hour >= 6 && hour <= 21) {isOpen = true; } else { console.log('Nahh Not open');};
