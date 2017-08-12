@@ -184,6 +184,7 @@ const actions = {
     var isOpen = false;
     
     // Checks if Open
+    console.log(Hours,day);
     switch (day) {
     case(day >= 0 && day <= 5):
         if (Hour >= 6 && Hour <= 21) { var isOpen = true; }
@@ -205,7 +206,7 @@ const actions = {
     var recipientId = 1337595769686359;
     var text = '"message":{"text":"Let me know if there\'s something else I can help you with!"}';
     sleep.sleep(3);
-    fbRichMessage(recipientId, text);
+    //fbRichMessage(recipientId, text);
   },
     
     
