@@ -225,17 +225,10 @@ const actions = {
   },
     
   // Navigation Cards
-  NavigationA(text) {
+  Navigation(text) {
     console.log('Navigation Card');
     var recipientId = sessions[text.sessionId].fbid;
-    var text = '"message":{"attachment":{"type":"template","payload":{"template_type":"button","text":"Here are a list of things I can help you with:","buttons":[{"type":"postback","title":"Contact Us","payload":"Contact Us"},{"type":"postback","title":"Classes","payload":"USER_DEFINED_PAYLOAD"},{"type":"postback","title":"Booking","payload":"USER_DEFINED_PAYLOAD"}]}}}';
-    fbRichMessage(recipientId, text);
-  },
-
-  NavigationB(text) {
-    console.log('Navigation Card');
-    var recipientId = sessions[text.sessionId].fbid;
-    var text = '"message":{"attachment":{"type":"template","payload":{"template_type":"button","text":"Continued:","buttons":[{"type":"postback","title":"Directions","payload":"USER_DEFINED_PAYLOAD"},{"type":"postback","title":"Opening Hours","payload":"USER_DEFINED_PAYLOAD"},{"type":"postback","title":"Live Chat","payload":"USER_DEFINED_PAYLOAD"}]}}}';
+    var text = '"message":{"text":"Here are a list of things I can help you with:","quick_replies":[{"content_type":"text","title":"Contact us","payload":"Contact us"},{"content_type":"text","title":"Classes","payload":"Classes"},{"content_type":"text","title":"Booking","payload":"Booking"},{"content_type":"text","title":"Directions","payload":"Directions"},{"content_type":"text","title":"Opening Hours","payload":"Opening Hours"},{"content_type":"text","title":"Teachers","payload":"Teachers"},{"content_type":"text","title":"Help","payload":"Help"},{"content_type":"text","title":"Live Chat","payload":"Live Chat"}]}';
     fbRichMessage(recipientId, text);
   },
 
