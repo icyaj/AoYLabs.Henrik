@@ -248,6 +248,14 @@ const actions = {
     sleep.sleep(3);
     fbRichMessage(recipientId, text);
   },
+
+  // Typing
+  Typing(text) {
+    console.log('Typing Card');
+    var recipientId = sessions[text.sessionId].fbid;
+    var text = '"sender_action":"typing_on"';
+    fbRichMessage(recipientId, text);
+  },
     
     
 };
