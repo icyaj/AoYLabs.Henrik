@@ -166,11 +166,11 @@ const actions = {
     
     // Sends Welcome Msgs.
     fbRichMessage(recipientId, text);
-    sleep.sleep(2);
+    sleep.sleep(3);
     fbRichMessage(recipientId, text2);
-    sleep.sleep(2);
+    sleep.sleep(3);
     fbRichMessage(recipientId, text3); 
-    sleep.sleep(2);
+    sleep.sleep(3);
     fbRichMessage(recipientId, text4);
   },
 
