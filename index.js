@@ -164,9 +164,13 @@ const actions = {
     var text3 = '"message":{"text":"I can help you with a variety of things from booking a class to providing you with info about class schedules, how to get to our studio and more! "}'      
     var text4 = '"message":{"text":"Ask me a question or type \'navigation\' to see what I can do! If you need help at any time, just type \'help\'."}'
     
+    // Sends Welcome Msgs.
     fbRichMessage(recipientId, text);
+    sleep.sleep(2);
     fbRichMessage(recipientId, text2);
-    fbRichMessage(recipientId, text3);
+    sleep.sleep(2);
+    fbRichMessage(recipientId, text3); 
+    sleep.sleep(2);
     fbRichMessage(recipientId, text4);
   },
 
