@@ -174,10 +174,9 @@ const actions = {
     var text3 = '"message":{"text":"Ask me a question or type \'navigation\' to see what I can do! If you need help at any time, just type \'help\'."}'
     
     // Sends Welcome Msgs.
-    fbRichMessage(recipientId, text);
     sleep.sleep(3);
+    fbRichMessage(recipientId, text);  
     fbRichMessage(recipientId, text2);
-    sleep.sleep(3);
     fbRichMessage(recipientId, text3); 
   },
 
