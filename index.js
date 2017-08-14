@@ -228,7 +228,7 @@ const actions = {
   NavigationA(text) {
     console.log('Navigation Card');
     var recipientId = sessions[text.sessionId].fbid;
-    var text = '"message":{"attachment":{"type":"template","payload":{"template_type":"button","text":"Here are a list of things I can help you with:","buttons":[{"type":"postback","title":"Contact Us","payload":"USER_DEFINED_PAYLOAD"},{"type":"postback","title":"Classes","payload":"USER_DEFINED_PAYLOAD"},{"type":"postback","title":"Booking","payload":"USER_DEFINED_PAYLOAD"}]}}}';
+    var text = '"message":{"attachment":{"type":"template","payload":{"template_type":"button","text":"Here are a list of things I can help you with:","buttons":[{"type":"postback","title":"Contact Us","payload":"Contact Us"},{"type":"postback","title":"Classes","payload":"USER_DEFINED_PAYLOAD"},{"type":"postback","title":"Booking","payload":"USER_DEFINED_PAYLOAD"}]}}}';
     fbRichMessage(recipientId, text);
   },
 
