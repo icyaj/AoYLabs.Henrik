@@ -228,16 +228,8 @@ const actions = {
   Navigation(text) {
     console.log('Navigation Card');
     var recipientId = sessions[text.sessionId].fbid;
-    var text = '"message":{"text":"Here are a list of things I can help you with:","quick_replies":[{"content_type":"text","title":"Contact us","payload":"Contact us"},{"content_type":"text","title":"Classes","payload":"Classes"},{"content_type":"text","title":"Booking","payload":"Booking"},{"content_type":"text","title":"Directions","payload":"Directions"},{"content_type":"text","title":"Opening Hours","payload":"Opening Hours"},{"content_type":"text","title":"Teachers","payload":"Teachers"},{"content_type":"text","title":"Help","payload":"Help"},{"content_type":"text","title":"Live Chat","payload":"Live Chat"}]}';
+    var text = '"message":{"text":"Choose an option below or type \'help\' if you need assistance at any time. Here is a list of things I can help you with:","quick_replies":[{"content_type":"text","title":"Contact us","payload":"Contact us"},{"content_type":"text","title":"Classes","payload":"Classes"},{"content_type":"text","title":"Booking","payload":"Booking"},{"content_type":"text","title":"Directions","payload":"Directions"},{"content_type":"text","title":"Opening Hours","payload":"Opening Hours"},{"content_type":"text","title":"Teachers","payload":"Teachers"},{"content_type":"text","title":"Help","payload":"Help"},{"content_type":"text","title":"Live Chat","payload":"Live Chat"}]}';
     fbRichMessage(recipientId, text);
-  },
-
-  NavigationText(text) {
-    console.log('Navigation Text');
-    var recipientId = sessions[text.sessionId].fbid;
-    var text = '"message":{"text":"Choose an option above or type \'help\' if you need assistance at any time"}';         
-    sleep.sleep(2);
-    fbRichMessage(recipientId, text);  
   },
     
   // Ok
