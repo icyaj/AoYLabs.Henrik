@@ -231,6 +231,13 @@ const actions = {
     var text = '"message":{"text":"Choose an option below or type \'help\' if you need assistance at any time. Here is a list of things I can help you with:","quick_replies":[{"content_type":"text","title":"Contact us","payload":"Contact us"},{"content_type":"text","title":"Classes","payload":"Classes"},{"content_type":"text","title":"Booking","payload":"Booking"},{"content_type":"text","title":"Directions","payload":"Directions"},{"content_type":"text","title":"Opening Hours","payload":"Opening Hours"},{"content_type":"text","title":"Teachers","payload":"Teachers"},{"content_type":"text","title":"Parking","payload":"Parking"},{"content_type":"text","title":"Public Transport","payload":"Public Transport"},{"content_type":"text","title":"Help","payload":"Help"},{"content_type":"text","title":"Live Chat","payload":"Live Chat"}]}';
     fbRichMessage(recipientId, text);
   },
+  
+  // Class Type / Teacher Card
+  ClassTypeTeacher(text) {
+    console.log('ClassType / Teacher Card');
+    var recipientId = sessions[text.sessionId].fbid;
+    var text = '"message": {"attachment": {"type": "template","payload": {"template_type": "list","top_element_style": "large","elements": [{"title": "Art of Yoga - Classes","subtitle": "Here are the other types of classes we offer: ","image_url": "https://artofyoga.sg/wp-content/uploads/2015/11/2.jpg","buttons": [{"title": "View","type": "web_url","url": "https://artofyoga.sg/all-classes/","messenger_extensions": true,"webview_height_ratio": "tall","fallback_url": "https://artofyoga.sg"}]},{"title": "Art of Yoga - Teachers","subtitle": "Our teachers have over 35 years of teaching in a variety of disciplines and styles. Here are some of them:","buttons": [{"title": "View","type": "web_url","url": "https://artofyoga.sg/teachers/","messenger_extensions": true,"webview_height_ratio": "tall","fallback_url": "https://artofyoga.sg"}]}]}}}';
+    fbRichMessage(recipientId, text);
 
   // Help Cards
   HelpA(text) {
