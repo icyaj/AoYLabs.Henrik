@@ -159,7 +159,15 @@ const actions = {
     console.log('Welcome Card');
     var recipientId = sessions[text.sessionId].fbid;
     var text = '"message":{"attachment":{"type":"template","payload":{"template_type":"generic","elements":[{"title":"Art of Yoga - A Boutique Yoga Studio in Singapore\'s East Coast ","image_url":"https://artofyoga.sg/wp-content/uploads/2017/02/AoY-Fullsize-0294.jpg","subtitle":"We offer a variety of yoga classes including Ashtanga, Hatha, Pre-Natal and more","default_action": {"type": "web_url","url": "https://www.instagram.com/p/rYlPzKtOqJ/","messenger_extensions": true,"webview_height_ratio": "tall","fallback_url": "https://www.instagram.com/artofyogasg/"},"buttons":[{"type":"web_url","url":"https://artofyoga.sg","title":"AoY Website"}]}]}}}';
+      
+    var text2 = '"message":{"text":"Hi! I\'m Henrik - Art of Yoga\'s experimental AI powered chatbot!"}'       
+    var text3 = '"message":{"text":"I can help you with a variety of things from booking a class to providing you with info about class schedules, how to get to our studio and more! "}'      
+    var text4 = '"message":{"text":"Ask me a question or type \'navigation\' to see what I can do! If you need help at any time, just type \'help\'."}'
+    
     fbRichMessage(recipientId, text);
+    fbRichMessage(recipientId, text2);
+    fbRichMessage(recipientId, text3);
+    fbRichMessage(recipientId, text4);
   },
 
   // Contact Us / Directions
