@@ -174,7 +174,7 @@ const actions = {
   WelcomeTextB(text) {
     console.log('Welcome Text 2');
     var recipientId = sessions[text.sessionId].fbid;   
-    var text2 = '"message":{"text":"I can help you with a variety of things from booking a class to providing you with info about class schedules, how to get to our studio and more! "}';
+    var text = '"message":{"text":"I can help you with a variety of things from booking a class to providing you with info about class schedules, how to get to our studio and more! "}';
     sleep.sleep(2);
     fbRichMessage(recipientId, text);  
   },
@@ -182,7 +182,7 @@ const actions = {
   WelcomeTextC(text) {
     console.log('Welcome Text 3');
     var recipientId = sessions[text.sessionId].fbid;    
-    var text3 = '"message":{"text":"Ask me a question or type \'navigation\' to see what I can do! If you need help at any time, just type \'help\'."}';
+    var text = '"message":{"text":"Ask me a question or type \'navigation\' to see what I can do! If you need help at any time, just type \'help\'."}';
     sleep.sleep(2);
     fbRichMessage(recipientId, text);  
   },
