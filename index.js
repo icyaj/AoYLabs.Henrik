@@ -163,7 +163,7 @@ const actions = {
   },
 
   // Welcome Text Messages. Have to put them in seperate Functions or they may not send in right order.
-  WelcomeText(text) {
+  WelcomeTextA(text) {
     console.log('Welcome Text 1');
     var recipientId = sessions[text.sessionId].fbid;
     var text = '"message":{"text":"Hi! I\'m Henrik - Art of Yoga\'s experimental AI powered chatbot!"}'         
@@ -171,17 +171,19 @@ const actions = {
     fbRichMessage(recipientId, text);  
   },
 
-  WelcomeText2(text) {
+  WelcomeTextB(text) {
     console.log('Welcome Text 2');
     var recipientId = sessions[text.sessionId].fbid;   
-    var text2 = '"message":{"text":"I can help you with a variety of things from booking a class to providing you with info about class schedules, how to get to our studio and more! "}'      
+    var text2 = '"message":{"text":"I can help you with a variety of things from booking a class to providing you with info about class schedules, how to get to our studio and more! "}';
+    sleep.sleep(2);
     fbRichMessage(recipientId, text);  
   },
 
-  WelcomeText3(text) {
+  WelcomeTextC(text) {
     console.log('Welcome Text 3');
     var recipientId = sessions[text.sessionId].fbid;    
-    var text3 = '"message":{"text":"Ask me a question or type \'navigation\' to see what I can do! If you need help at any time, just type \'help\'."}'
+    var text3 = '"message":{"text":"Ask me a question or type \'navigation\' to see what I can do! If you need help at any time, just type \'help\'."}';
+    sleep.sleep(2);
     fbRichMessage(recipientId, text);  
   },
 
@@ -233,7 +235,7 @@ const actions = {
   NavigationText(text) {
     console.log('Navigation Text');
     var recipientId = sessions[text.sessionId].fbid;
-    var text = '"message":{"text":"Choose an option above or type \'help\' if you need assistance at any time"}'         
+    var text = '"message":{"text":"Choose an option above or type \'help\' if you need assistance at any time"}';         
     sleep.sleep(2);
     fbRichMessage(recipientId, text);  
   },
