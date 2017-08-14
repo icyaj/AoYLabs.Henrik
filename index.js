@@ -224,11 +224,18 @@ const actions = {
 
   },
     
-  // Navigation Card
-  Navigation(text) {
+  // Navigation Cards
+  NavigationA(text) {
     console.log('Navigation Card');
     var recipientId = sessions[text.sessionId].fbid;
-    var text = '"message":{"attachment":{"type":"template","payload":{"template_type":"generic","elements":[{"title":"Art of Yoga - Contact Us / Directions","image_url":"https://artofyoga.sg/wp-content/uploads/2015/11/1.jpg","subtitle":"121 Upper East Coast Road, #02-01","default_action": {"type": "web_url","url": "https://artofyoga.sg","messenger_extensions": true,"webview_height_ratio": "tall","fallback_url": "https://artofyoga.sg"},"buttons":[{"type":"web_url","url":"https://artofyoga.sg/contact/","title":"Contact"},{"type":"web_url","url":"https://www.google.com/maps/place/Art+of+Yoga/@1.3135891,103.9294062,15z/data=!4m5!3m4!1s0x0:0x15092c1c80eb83bb!8m2!3d1.3135891!4d103.9294062","title":"Directions"}]}]}}}';
+    var text = '"message":{"attachment":{"type":"template","payload":{"template_type":"button","text":"Here are a list of things I can help you with:","buttons":[{"type":"postback","title":"Contact Us","payload":"USER_DEFINED_PAYLOAD"},{"type":"postback","title":"Classes","payload":"USER_DEFINED_PAYLOAD"},{"type":"postback","title":"Book","payload":"USER_DEFINED_PAYLOAD"}]}}}';
+    fbRichMessage(recipientId, text);
+  },
+
+  NavigationB(text) {
+    console.log('Navigation Card');
+    var recipientId = sessions[text.sessionId].fbid;
+    var text = '"message":{"attachment":{"type":"template","payload":{"template_type":"button","text":"More:","buttons":[{"type":"postback","title":"Directions","payload":"USER_DEFINED_PAYLOAD"},{"type":"postback","title":"Schedule","payload":"USER_DEFINED_PAYLOAD"},{"type":"postback","title":"Live Chat","payload":"USER_DEFINED_PAYLOAD"}]}}}';
     fbRichMessage(recipientId, text);
   },
 
