@@ -166,7 +166,7 @@ const actions = {
   WelcomeTextA(text) {
     console.log('Welcome Text 1');
     var recipientId = sessions[text.sessionId].fbid;
-    var text = '"message":{"text":"Hi! I\'m Henrik - Art of Yoga\'s experimental AI powered chatbot!"}'         
+    var text = '"message":{"text":"Hi! I\'m Henrik - Art of Yoga\'s experimental AI powered chatbot!"}';         
     sleep.sleep(2);
     fbRichMessage(recipientId, text);  
   },
