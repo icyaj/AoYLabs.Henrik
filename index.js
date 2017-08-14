@@ -224,14 +224,38 @@ const actions = {
 
   },
     
-  // Navigation Cards
+  // Navigation Card
   Navigation(text) {
     console.log('Navigation Card');
     var recipientId = sessions[text.sessionId].fbid;
-    var text = '"message":{"text":"Choose an option below or type \'help\' if you need assistance at any time. Here is a list of things I can help you with:","quick_replies":[{"content_type":"text","title":"Contact us","payload":"Contact us"},{"content_type":"text","title":"Classes","payload":"Classes"},{"content_type":"text","title":"Booking","payload":"Booking"},{"content_type":"text","title":"Directions","payload":"Directions"},{"content_type":"text","title":"Opening Hours","payload":"Opening Hours"},{"content_type":"text","title":"Teachers","payload":"Teachers"},{"content_type":"text","title":"Help","payload":"Help"},{"content_type":"text","title":"Live Chat","payload":"Live Chat"}]}';
+    var text = '"message":{"text":"Choose an option below or type \'help\' if you need assistance at any time. Here is a list of things I can help you with:","quick_replies":[{"content_type":"text","title":"Contact us","payload":"Contact us"},{"content_type":"text","title":"Classes","payload":"Classes"},{"content_type":"text","title":"Booking","payload":"Booking"},{"content_type":"text","title":"Directions","payload":"Directions"},{"content_type":"text","title":"Opening Hours","payload":"Opening Hours"},{"content_type":"text","title":"Teachers","payload":"Teachers"},{"content_type":"text","title":"Parking","payload":"Parking"},{"content_type":"text","title":"Public Transport","payload":"Public Transport"},{"content_type":"text","title":"Help","payload":"Help"},{"content_type":"text","title":"Live Chat","payload":"Live Chat"}]}';
+    fbRichMessage(recipientId, text);
+  },
+
+  // Help Cards
+  HelpA(text) {
+    console.log('Help Text 1');
+    var recipientId = sessions[text.sessionId].fbid;
+    var text = '"message":{"text":"I am an AI chat bot designed to assist you with a variety of tasks from booking a class to giving you directions and more."}';
     fbRichMessage(recipientId, text);
   },
     
+  HelpB(text) {
+    console.log('Help Text 2');
+    var recipientId = sessions[text.sessionId].fbid;
+    var text = '"message":{"text":"You can ask me a question like \'what kind of classes do you offer\' or \'how do I get to the studio\'."}';
+    sleep.sleep(2);
+    fbRichMessage(recipientId, text);
+  },
+
+  HelpC(text) {
+    console.log('Help Text 3');
+    var recipientId = sessions[text.sessionId].fbid;
+    var text = '"message":{"text":"I can also put you in touch with a human operator if you type \'Human\'. Try it out!"}';
+    sleep.sleep(2);
+    fbRichMessage(recipientId, text);
+  },
+
   // Ok
   Ok(text) {
     console.log('Ok Card');
