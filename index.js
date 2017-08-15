@@ -103,7 +103,7 @@ const GetText = (textLocation, textTitle) => {
     var file = NodeFileParser.link(textLocation);
     var text = file.read().getContent();
     return text;
-  },
+};
       
 // ----------------------------------------------------------------------------
 // Wit.ai bot specific code
