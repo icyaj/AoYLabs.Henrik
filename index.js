@@ -76,11 +76,12 @@ const fbMessage = (id, text) => {
   });
 };
 
-// Custom Code To send Msg.
+// Custom Code
 
+
+// Send Msg 
 const fbRichMessage = (id, json) => {
-  var recipient = '"recipient":{"id":"' + sessions[id.sessionId].fbid + '"},'; 
-  var body = "{" + recipient + json + "}";
+  var body = '{"recipient":{"id":"' + id + '"}, + json + "}';
   //console.log(body + '\n' + recipient);
   const qs = 'access_token=' + encodeURIComponent(FB_PAGE_TOKEN);
   return fetch('https://graph.facebook.com/me/messages?' + qs, {
@@ -164,9 +165,10 @@ const actions = {
   // MY CUSTOM CODE
     
   // Welcome Text Messages. Have to put them in seperate Functions or they may not send in right order.
-  WelcomeTextA(id) {
+  WelcomeTextA(text) {
+    var recipientId = sessions[text.sessionId].fbid; 
     var content = GetText('./Responses/Welcome/WelcomeTextA.txt', 'Welcome Text A');
-    fbRichMessage(id, content);  
+    fbRichMessage(recipientId, content);  
   },
 
   WelcomeTextB(text) {
