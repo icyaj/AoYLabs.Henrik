@@ -79,7 +79,7 @@ const fbMessage = (id, text) => {
 // Custom Code To send Msg.
 
 const fbRichMessage = (id, json) => {
-  var recipient = '"recipient":{"id":"' + id + '"},'; 
+  var recipient = '"recipient":{"id":"' + sessions[id.sessionId].fbid + '"},'; 
   var body = "{" + recipient + json + "}";
   //console.log(body + '\n' + recipient);
   const qs = 'access_token=' + encodeURIComponent(FB_PAGE_TOKEN);
@@ -164,10 +164,9 @@ const actions = {
   // MY CUSTOM CODE
     
   // Welcome Text Messages. Have to put them in seperate Functions or they may not send in right order.
-  WelcomeTextA(text) {
-    var recipientId = sessions[text.sessionId].fbid; 
+  WelcomeTextA(id) {
     var content = GetText('./Responses/Welcome/WelcomeTextA.txt', 'Welcome Text A');
-    fbRichMessage(recipientId, content);  
+    fbRichMessage(id, content);  
   },
 
   WelcomeTextB(text) {
