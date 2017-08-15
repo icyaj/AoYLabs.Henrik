@@ -165,10 +165,8 @@ const actions = {
     
   // Welcome Text Messages. Have to put them in seperate Functions or they may not send in right order.
   WelcomeTextA(text) {
-    var textLocation = './Responses/Welcome/WelcomeTextA.txt';
-    var textTitle = 'Welcome Text A';
     var recipientId = sessions[text.sessionId].fbid; 
-    var content = GetText(textLocation, textTitle);
+    var content = GetText('./Responses/Welcome/WelcomeTextA.txt', 'Welcome Text A');
     fbRichMessage(recipientId, content);  
   },
 
