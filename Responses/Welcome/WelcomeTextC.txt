@@ -1,0 +1,3 @@
+"message":{
+  	"text":"Ask me a question or type 'navigation' to see what I can do! If you need help at any time, just type 'help'."
+  }

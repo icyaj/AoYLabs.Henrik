@@ -1,6 +1,4 @@
-{
-  "recipient":{"id":"1337595769686359"},
-  "message":{
+"message":{
     "attachment":{
       "type":"template",
       "payload":{
@@ -31,4 +29,3 @@
       }
     }
   }
-}

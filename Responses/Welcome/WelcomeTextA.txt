@@ -1,0 +1,3 @@
+"message":{
+  	"text":"Hi! I'm Henrik - Art of Yoga's experimental AI powered chatbot!"
+  }

@@ -1,0 +1,3 @@
+"message":{
+  	"text":"I can help you with a variety of things from booking a class to providing you with info about class schedules, how to get to our studio and more! "
+  }

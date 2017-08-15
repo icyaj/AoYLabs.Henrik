@@ -1,0 +1,41 @@
+"message": {
+    "attachment": {
+      "type": "template",
+      "payload": {
+        "template_type": "list",
+        "top_element_style": "large",
+        "elements": [
+          {
+            "title": "Art of Yoga - Classes",
+            "subtitle": "Here are the other types of classes we offer: ",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2015/11/2.jpg",          
+            "buttons": [
+              {
+                "title": "View",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/all-classes/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg"            
+              }
+            ]
+          },
+          {
+            "title": "Art of Yoga - Teachers",
+            "subtitle": "Our teachers have over 35 years of teaching in a variety of disciplines and styles. Here are some of them: ",
+                     
+            "buttons": [
+              {
+                "title": "View",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/teachers/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg"            
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }

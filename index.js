@@ -75,7 +75,7 @@ const fbMessage = (id, text) => {
   });
 };
 
-// Custom Code
+// Custom Code To send Msg.
 
 const fbRichMessage = (id, json) => {
   var recipient = '"recipient":{"id":"' + id + '"},'; 
@@ -97,6 +97,14 @@ const fbRichMessage = (id, json) => {
   });
 };
 
+// Msg Body Builder 
+GetText(textLocation, textTitle) {
+    console.log('Fetching ' + textTitle + ' File Contents');
+    var file = NodeFileParser.link(textLocation);
+    var text = file.read().getContent();
+    return text;
+  },
+      
 // ----------------------------------------------------------------------------
 // Wit.ai bot specific code
 
@@ -154,20 +162,12 @@ const actions = {
     
   // MY CUSTOM CODE
     
-  // Welcome Card
-  Welcome(text) {
-    console.log('Welcome Card');
-    var recipientId = sessions[text.sessionId].fbid;
-    var text = '"message":{"attachment":{"type":"template","payload":{"template_type":"generic","elements":[{"title":"Art of Yoga - A Boutique Yoga Studio in Singapore\'s East Coast ","image_url":"https://artofyoga.sg/wp-content/uploads/2017/02/AoY-Fullsize-0294.jpg","subtitle":"We offer a variety of yoga classes including Ashtanga, Hatha, Pre-Natal and more","default_action": {"type": "web_url","url": "https://www.instagram.com/p/rYlPzKtOqJ/","messenger_extensions": true,"webview_height_ratio": "tall","fallback_url": "https://www.instagram.com/artofyogasg/"},"buttons":[{"type":"web_url","url":"https://artofyoga.sg","title":"AoY Website"}]}]}}}';
-    fbRichMessage(recipientId, text);
-  },
-
   // Welcome Text Messages. Have to put them in seperate Functions or they may not send in right order.
   WelcomeTextA(text) {
-    console.log('Welcome Text 1');
-    var recipientId = sessions[text.sessionId].fbid;
-    var text = '"message":{"text":"Hi! I\'m Henrik - Art of Yoga\'s experimental AI powered chatbot!"}';         
-    sleep.sleep(2);
+    textLocation = '/Welcome/WelcomeTextA.txt';
+    textTitle = 'Welcome Text A';
+    text = GetText(textLocation, textTitle);
+    var recipientId = sessions[text.sessionId].fbid;         
     fbRichMessage(recipientId, text);  
   },
 
