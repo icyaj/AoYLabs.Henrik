@@ -21,6 +21,7 @@ const request = require('request');
 
 const sleep = require('sleep');
 const moment = require('moment-timezone');
+const NodeFileParser = require('node-file-parser');
 
 let Wit = null;
 let log = null;
