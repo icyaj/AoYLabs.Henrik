@@ -165,7 +165,7 @@ const actions = {
     
   // Welcome Text Messages. Have to put them in seperate Functions or they may not send in right order.
   WelcomeTextA(text) {
-    var textLocation = '/Welcome/WelcomeTextA.txt';
+    var textLocation = './Welcome/WelcomeTextA.txt';
     var textTitle = 'Welcome Text A';
     var text = GetText(textLocation, textTitle);
     var recipientId = sessions[text.sessionId].fbid;         
