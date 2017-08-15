@@ -167,9 +167,9 @@ const actions = {
   WelcomeTextA(text) {
     var textLocation = './Responses/Welcome/WelcomeTextA.txt';
     var textTitle = 'Welcome Text A';
-    var text = GetText(textLocation, textTitle);
+    var content = GetText(textLocation, textTitle);
     var recipientId = sessions[text.sessionId].fbid;         
-    fbRichMessage(recipientId, text);  
+    fbRichMessage(recipientId, content);  
   },
 
   WelcomeTextB(text) {
