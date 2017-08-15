@@ -98,7 +98,7 @@ const fbRichMessage = (id, json) => {
 };
 
 // Msg Body Builder 
-GetText(textLocation, textTitle) {
+const GetText = (textLocation, textTitle) => {
     console.log('Fetching ' + textTitle + ' File Contents');
     var file = NodeFileParser.link(textLocation);
     var text = file.read().getContent();
