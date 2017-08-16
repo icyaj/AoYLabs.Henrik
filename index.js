@@ -166,33 +166,26 @@ const actions = {
     
   // Welcome Text Messages. Have to put them in seperate Functions or they may not send in right order.
   WelcomeTextA(text) {
-    var recipientId = sessions[text.sessionId].fbid; 
     var content = GetText('./Responses/Welcome/WelcomeTextA.txt', 'Welcome Text A');
-    fbRichMessage(recipientId, content);  
+    fbRichMessage(sessions[text.sessionId].fbid, content);  
   },
 
   WelcomeTextB(text) {
-    console.log('Welcome Text 2');
-    var recipientId = sessions[text.sessionId].fbid;   
-    var text = '"message":{"text":"I can help you with a variety of things from booking a class to providing you with info about class schedules, how to get to our studio and more! "}';
+    var content = GetText('./Responses/Welcome/WelcomeTextB.txt', 'Welcome Text B'); 
     sleep.sleep(2);
-    fbRichMessage(recipientId, text);  
+    fbRichMessage(sessions[text.sessionId].fbid, text);  
   },
 
   WelcomeTextC(text) {
-    console.log('Welcome Text 3');
-    var recipientId = sessions[text.sessionId].fbid;    
-    var text = '"message":{"text":"Ask me a question or type \'navigation\' to see what I can do! If you need help at any time, just type \'help\'."}';
+    var content = GetText('./Responses/Welcome/WelcomeTextC.txt', 'Welcome Text C'); 
     sleep.sleep(2);
-    fbRichMessage(recipientId, text);  
+    fbRichMessage(sessions[text.sessionId].fbid, text);  
   },
 
   // Contact Us / Directions
   Directions(text) {
-    console.log('Directions Card');
-    var recipientId = sessions[text.sessionId].fbid;
-    var text = '"message":{"attachment":{"type":"template","payload":{"template_type":"generic","elements":[{"title":"Art of Yoga - Contact Us / Directions","image_url":"https://artofyoga.sg/wp-content/uploads/2015/11/1.jpg","subtitle":"121 Upper East Coast Road, #02-01","default_action": {"type": "web_url","url": "https://artofyoga.sg","messenger_extensions": true,"webview_height_ratio": "tall","fallback_url": "https://artofyoga.sg"},"buttons":[{"type":"web_url","url":"https://artofyoga.sg/contact/","title":"Contact"},{"type":"web_url","url":"https://www.google.com/maps/place/Art+of+Yoga/@1.3135891,103.9294062,15z/data=!4m5!3m4!1s0x0:0x15092c1c80eb83bb!8m2!3d1.3135891!4d103.9294062","title":"Directions"}]}]}}}';
-    fbRichMessage(recipientId, text);
+    var content = GetText('./Responses/Directions/Directions.txt', 'Directions Card'); 
+    fbRichMessage(sessions[text.sessionId].fbid, text);
   },
     
   // Operating Hours
