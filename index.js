@@ -122,7 +122,7 @@ const CheckOpen = () => {
         var isOpen = true; 
     } else if ((day >= 6 && day <= 7) && ((hour >= 8 && hour <= 17) || (hour === 7 && minute >= 30))) {
         var isOpen = true; };
-    if (isOpen === true) {var open = 'Currently Open'; } else {var open = 'Currently Closed'; };
+    if (isOpen === true) {var open = 'Open'; } else {var open = 'Closed'; };
     return open; 
 };
       
@@ -210,8 +210,8 @@ const actions = {
     
   // Operating Hours
   OperatingHours(text) {
-    var content = GetText('./Responses/OpeningHours/OpeningHours.txt', 'Operating Hours Card'); 
-    var content = '"message":{"attachment":{"type":"template","payload":{"template_type":"generic","elements":[{"title":"Art of Yoga - Operating Hours","image_url":"https://artofyoga.sg/wp-content/uploads/2015/11/16998817_1090435211063008_2620425424784904845_n.jpg","subtitle":"Monday - Friday: 6am - 9pm \\nSaturday & Sunday: 7:30am - 5pm \\n' + CheckOpen() + '","default_action": {"type": "web_url","url": "https://artofyoga.sg","messenger_extensions": true,"webview_height_ratio": "tall","fallback_url": "https://artofyoga.sg"}}]}}}';
+    var content = GetText('./Responses/OpeningHours/OpenClose.txt', 'Operating Hours Card'); 
+    var content = content + CheckOpen() + '" }';
     fbRichMessage(sessions[text.sessionId].fbid, content);
 
   },
