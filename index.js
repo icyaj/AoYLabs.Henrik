@@ -106,6 +106,25 @@ const GetText = (textLocation, textTitle) => {
     var text = file.read().getContent();
     return text;
 };
+
+// Checks if the Stuido is open via the clock.
+const CheckOpen = () => {
+    //console.log(moment().tz("Asia/Singapore").format());  
+    
+    // Sets Day, Hour, Minute & open 
+    var day = moment().tz("Asia/Singapore").weekday();  
+    var hour = moment().tz("Asia/Singapore").hour();
+    var minute = moment().tz("Asia/Singapore").minute();
+ 
+    // Logic to Test if Open or Closed.
+    //console.log(hour,day);
+    if ((day >= 0 && day <= 5) && (hour >= 6 && hour <= 21)) {
+        var isOpen = true; 
+    } else if ((day >= 6 && day <= 7) && ((hour >= 8 && hour <= 17) || (hour === 7 && minute >= 30))) {
+        var isOpen = true; };
+    if (isOpen === true) {var open = 'Currently Open'; } else {var open = 'Currently Closed'; };
+    return open; 
+};
       
 // ----------------------------------------------------------------------------
 // Wit.ai bot specific code
@@ -173,47 +192,26 @@ const actions = {
   WelcomeTextB(text) {
     var content = GetText('./Responses/Welcome/WelcomeTextB.txt', 'Welcome Text B'); 
     sleep.sleep(2);
-    fbRichMessage(sessions[text.sessionId].fbid, text);  
+    fbRichMessage(sessions[text.sessionId].fbid, content);  
   },
 
   WelcomeTextC(text) {
     var content = GetText('./Responses/Welcome/WelcomeTextC.txt', 'Welcome Text C'); 
     sleep.sleep(2);
-    fbRichMessage(sessions[text.sessionId].fbid, text);  
+    fbRichMessage(sessions[text.sessionId].fbid, content);  
   },
 
   // Contact Us / Directions
   Directions(text) {
     var content = GetText('./Responses/Directions/Directions.txt', 'Directions Card'); 
-    fbRichMessage(sessions[text.sessionId].fbid, text);
+    fbRichMessage(sessions[text.sessionId].fbid, content);
   },
     
   // Operating Hours
   OperatingHours(text) {
-    console.log('Operating Hours Card');
-    
-    //console.log(moment().tz("Asia/Singapore").format());  
-    
-    // Sets Day, Hour, Minute & open 
-    var day = moment().tz("Asia/Singapore").weekday();  
-    var hour = moment().tz("Asia/Singapore").hour();
-    var minute = moment().tz("Asia/Singapore").minute();
- 
-    // Logic to Test if Open or Closed.
-    //console.log(hour,day);
-    if ((day >= 0 && day <= 5) && (hour >= 6 && hour <= 21)) {
-        var isOpen = true; 
-    } else if ((day >= 6 && day <= 7) && ((hour >= 8 && hour <= 17) || (hour === 7 && minute >= 30))) {
-        var isOpen = true; 
-    } else {
-        var isOpen = false;
-    }
-    if (isOpen === true) {var open = 'Currently Open'; } else {var open = 'Currently Closed'; }
-    //console.log(open);
-      
-    var recipientId = sessions[text.sessionId].fbid;
-    var text = '"message":{"attachment":{"type":"template","payload":{"template_type":"generic","elements":[{"title":"Art of Yoga - Operating Hours","image_url":"https://artofyoga.sg/wp-content/uploads/2015/11/16998817_1090435211063008_2620425424784904845_n.jpg","subtitle":"Monday - Friday: 6am - 9pm \\nSaturday & Sunday: 7:30am - 5pm \\n' + open + '","default_action": {"type": "web_url","url": "https://artofyoga.sg","messenger_extensions": true,"webview_height_ratio": "tall","fallback_url": "https://artofyoga.sg"}}]}}}';
-    fbRichMessage(recipientId, text);
+    var content = GetText('./Responses/OpeningHours/OpeningHours.txt', 'Operating Hours Card'); 
+    var content = '"message":{"attachment":{"type":"template","payload":{"template_type":"generic","elements":[{"title":"Art of Yoga - Operating Hours","image_url":"https://artofyoga.sg/wp-content/uploads/2015/11/16998817_1090435211063008_2620425424784904845_n.jpg","subtitle":"Monday - Friday: 6am - 9pm \\nSaturday & Sunday: 7:30am - 5pm \\n' + CheckOpen() + '","default_action": {"type": "web_url","url": "https://artofyoga.sg","messenger_extensions": true,"webview_height_ratio": "tall","fallback_url": "https://artofyoga.sg"}}]}}}';
+    fbRichMessage(sessions[text.sessionId].fbid, content);
 
   },
     
@@ -222,7 +220,7 @@ const actions = {
     console.log('Navigation Card');
     var recipientId = sessions[text.sessionId].fbid;
     var text = '"message":{"text":"Choose an option below or type \'help\' if you need assistance at any time. Here is a list of things I can help you with:","quick_replies":[{"content_type":"text","title":"Contact us","payload":"Contact us"},{"content_type":"text","title":"Classes","payload":"Classes"},{"content_type":"text","title":"Booking","payload":"Booking"},{"content_type":"text","title":"Directions","payload":"Directions"},{"content_type":"text","title":"Opening Hours","payload":"Opening Hours"},{"content_type":"text","title":"Teachers","payload":"Teachers"},{"content_type":"text","title":"Parking","payload":"Parking"},{"content_type":"text","title":"Public Transport","payload":"Public Transport"},{"content_type":"text","title":"Help","payload":"Help"},{"content_type":"text","title":"Live Chat","payload":"Live Chat"}]}';
-    fbRichMessage(recipientId, text);
+    fbRichMessage(recipientId, content);
   },
   
   // Class Type / Teacher Card
