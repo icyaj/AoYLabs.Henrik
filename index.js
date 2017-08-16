@@ -115,15 +115,19 @@ const CheckOpen = () => {
     var day = moment().tz("Asia/Singapore").weekday();  
     var hour = moment().tz("Asia/Singapore").hour();
     var minute = moment().tz("Asia/Singapore").minute();
- 
+    
+    // Response Static half
+    var open = 'Yes we are currently open until';
+    var closed = 'Unfortunatly we are currently closed & will open tomorrow at';
+    
     // Logic to Test if Open or Closed.
     //console.log(hour,day);
     if ((day >= 0 && day <= 5) && (hour >= 6 && hour <= 21)) {
-        var opencloseTime = '9pm today'; 
+        var opencloseTime = open + ' 9pm today'; 
     } else if ((day >= 6 && day <= 7) && ((hour >= 8 && hour <= 17) || (hour === 7 && minute >= 30))) {
-        var opencloseTime = '5pm today'; 
-    } else { if ((day + 1) >= 6 && (day + 1) <= 7) {var opencloseTime = '7:30am';}
-      else {var opencloseTime = '6am';};
+        var opencloseTime = open + ' 5pm today'; 
+    } else { if ((day + 1) >= 6 && (day + 1) <= 7) {var opencloseTime = closed + ' 7:30am';}
+      else {var opencloseTime = closed + ' 6am';};
     }
     return opencloseTime; 
 };
@@ -187,9 +191,8 @@ const actions = {
     
   // Welcome Text Messages. Have to put them in seperate Functions or they may not send in right order.
   WelcomeTextA(text) {
-    var recipientId = sessions[text.sessionId].fbid
     var content = GetText('./Responses/Welcome/WelcomeTextA.txt', 'Welcome Text A');
-    fbRichMessage(recipientId, content);  
+    fbRichMessage(var recipientId = sessions[text.sessionId].fbid, content);  
   },
 
   WelcomeTextB(text) {
