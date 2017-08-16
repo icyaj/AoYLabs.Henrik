@@ -117,8 +117,8 @@ const CheckOpen = () => {
     var minute = moment().tz("Asia/Singapore").minute();
     
     // Response Static half
-    var open = 'Yes we are currently open until';
-    var closed = 'Unfortunatly we are currently closed & will open tomorrow at';
+    var open = 'Yes, we are currently open until';
+    var closed = 'Unfortunately we are currently closed & will open tomorrow at';
     
     // Logic to Test if Open or Closed.
     //console.log(hour,day);
@@ -130,6 +130,10 @@ const CheckOpen = () => {
       else {var opencloseTime = closed + ' 6am';};
     }
     return opencloseTime; 
+};
+
+const OpenNextDay = () => {
+    
 };
       
 // ----------------------------------------------------------------------------
