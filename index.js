@@ -119,11 +119,13 @@ const CheckOpen = () => {
     // Logic to Test if Open or Closed.
     //console.log(hour,day);
     if ((day >= 0 && day <= 5) && (hour >= 6 && hour <= 21)) {
-        var isOpen = true; 
+        var opencloseTime = '9pm today'; 
     } else if ((day >= 6 && day <= 7) && ((hour >= 8 && hour <= 17) || (hour === 7 && minute >= 30))) {
-        var isOpen = true; };
-    if (isOpen === true) {var open = 'Open'; } else {var open = 'Closed'; };
-    return open; 
+        var opencloseTime = '5pm today'; 
+    } else { if ((day + 1) >= 6 && (day + 1) <= 7) {var opencloseTime = '7:30am';}
+      else {var opencloseTime = '6am';};
+    }
+    return opencloseTime; 
 };
       
 // ----------------------------------------------------------------------------

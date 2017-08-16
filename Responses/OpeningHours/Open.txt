@@ -1,0 +1,2 @@
+  "message":{
+  	"text":"Yes we are currently open until 
