@@ -385,9 +385,9 @@ app.post('/webhook', (req, res) => {
               // }
                
               // Custom Code
-              // if (context['True']) {
-              //     console.log('contactDetails is True');
-            //   }  
+               if (context['True']) {
+                 console.log('contactDetails is True');
+               };  
                 
               // Updating the user's current session state
               sessions[sessionId].context = context;
