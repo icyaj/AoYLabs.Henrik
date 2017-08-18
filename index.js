@@ -386,8 +386,8 @@ app.post('/webhook', (req, res) => {
               // }
                
               // Custom Code
-               if (Directions['True']) {
-                 console.log('Directions is True');
+               if (contactDetails['True']) {
+                 console.log('contactDetails is True');
                }  
                 
               // Updating the user's current session state
