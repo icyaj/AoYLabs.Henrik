@@ -187,7 +187,6 @@ const actions = {
     // Our bot has something to say!
     // Let's retrieve the Facebook user whose session belongs to
     const recipientId = sessions[sessionId].fbid;
-    console.log('Sup: ', recipientId);
     if (recipientId) {
       // Yay, we found our recipient!
       // Let's forward our bot response to her.
@@ -386,7 +385,7 @@ app.post('/webhook', (req, res) => {
               // }
                
               // Custom Code
-               if (contactDetails['True']) {
+               if (context['True']) {
                  console.log('contactDetails is True');
                }  
                 
