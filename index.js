@@ -383,12 +383,6 @@ app.post('/webhook', (req, res) => {
               // if (context['done']) {
               //   delete sessions[sessionId];
               // }
-              console.log(sessions);
-              console.log(context['True']);
-              // Custom Code
-               if (context['True']) {
-                 console.log('contactDetails is True');
-               };  
                 
               // Updating the user's current session state
               sessions[sessionId].context = context;
