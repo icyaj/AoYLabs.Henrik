@@ -287,8 +287,10 @@ const actions = {
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
   
-  // Handover to Live
+  // Handover to Live,
   HandOverLive(text) {
+    var content = GetText('./Responses/Human/HandoverText.txt', 'Handover Text'); 
+    fbRichMessage(sessions[text.sessionId].fbid, content);
     var content = GetText('./Responses/Human/HandoverToLive.txt', 'Handover to Live'); 
     fbHandOverMessage(sessions[text.sessionId].fbid, content);
   },
