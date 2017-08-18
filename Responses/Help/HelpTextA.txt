@@ -1,0 +1,3 @@
+"message":{
+  	"text":"I am an AI chat bot designed to assist you with a variety of tasks from booking a class to giving you directions and more."
+  }

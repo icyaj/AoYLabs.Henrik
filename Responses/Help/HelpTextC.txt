@@ -1,0 +1,3 @@
+"message":{
+  	"text":"I can also put you in touch with a human operator if you type 'human'. Try it out!"
+  }

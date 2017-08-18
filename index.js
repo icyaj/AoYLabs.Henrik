@@ -99,6 +99,26 @@ const fbRichMessage = (id, json) => {
   });
 };
 
+// Handover to Live 
+const fbHandOverMessage = (id, json) => {
+  console.log('Handover to Live:' + id);
+  var body = '{"recipient":{"id":"' + id + '"},' + json + '}';
+  const qs = 'access_token=' + encodeURIComponent(FB_PAGE_TOKEN);
+  return fetch('https://graph.facebook.com/v2.6/me/pass_thread_control?' + qs, {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body,
+  })
+  .then(rsp => rsp.json())
+  .then(responseJson => {
+    if (json.error && json.error.message) {
+      throw new Error(json.error.message);
+    }
+    //console.log(responseJson);
+    return responseJson;
+  });
+};
+
 // Msg Body Builder 
 const GetText = (textLocation, textTitle) => {
     console.log('Fetching ' + textTitle + ' File Contents');
@@ -222,64 +242,61 @@ const actions = {
     var content = GetText('./Responses/OpeningHours/OpenClose.txt', 'Operating Hours Card'); 
     var content = content + CheckOpen() + '" }';
     fbRichMessage(sessions[text.sessionId].fbid, content);
-
   },
     
   // Navigation Card
   Navigation(text) {
-    console.log('Navigation Card');
-    var recipientId = sessions[text.sessionId].fbid;
-    var text = '"message":{"text":"Choose an option below or type \'help\' if you need assistance at any time. Here is a list of things I can help you with:","quick_replies":[{"content_type":"text","title":"Contact us","payload":"Contact us"},{"content_type":"text","title":"Classes","payload":"Classes"},{"content_type":"text","title":"Booking","payload":"Booking"},{"content_type":"text","title":"Directions","payload":"Directions"},{"content_type":"text","title":"Opening Hours","payload":"Opening Hours"},{"content_type":"text","title":"Teachers","payload":"Teachers"},{"content_type":"text","title":"Parking","payload":"Parking"},{"content_type":"text","title":"Public Transport","payload":"Public Transport"},{"content_type":"text","title":"Help","payload":"Help"},{"content_type":"text","title":"Live Chat","payload":"Live Chat"}]}';
-    fbRichMessage(recipientId, content);
+    var content = GetText('./Responses/Navigation/Navigation.txt', 'Navigation Card');
+    fbRichMessage(sessions[text.sessionId].fbid, content);
   },
   
   // Class Type / Teacher Card
   ClassTypeTeacher(text) {
-    console.log('ClassType / Teacher Card');
-    var recipientId = sessions[text.sessionId].fbid;
-    var text = '"message": {"attachment": {"type": "template","payload": {"template_type": "list","top_element_style": "large","elements": [{"title": "Art of Yoga - Classes","subtitle": "Here are the other types of classes we offer: ","image_url": "https://artofyoga.sg/wp-content/uploads/2015/11/2.jpg","buttons": [{"title": "View","type": "web_url","url": "https://artofyoga.sg/all-classes/","messenger_extensions": true,"webview_height_ratio": "tall","fallback_url": "https://artofyoga.sg"}]},{"title": "Art of Yoga - Teachers","subtitle": "Our teachers have over 35 years of teaching in a variety of disciplines and styles. Here are some of them:","buttons": [{"title": "View","type": "web_url","url": "https://artofyoga.sg/teachers/","messenger_extensions": true,"webview_height_ratio": "tall","fallback_url": "https://artofyoga.sg"}]}]}}}';
-    fbRichMessage(recipientId, text);
+    var content = GetText('./Responses/ClassTypes/AllClassType.txt', 'ClassType / Teacher Card');
+    fbRichMessage(sessions[text.sessionId].fbid, content);
   },
     
   // Help Cards
   HelpA(text) {
-    console.log('Help Text 1');
-    var recipientId = sessions[text.sessionId].fbid;
-    var text = '"message":{"text":"I am an AI chat bot designed to assist you with a variety of tasks from booking a class to giving you directions and more."}';
-    fbRichMessage(recipientId, text);
+    var content = GetText('./Responses/Help/HelpTextA.txt', 'Help Text A');
+    fbRichMessage(sessions[text.sessionId].fbid, content);
   },
     
   HelpB(text) {
-    console.log('Help Text 2');
-    var recipientId = sessions[text.sessionId].fbid;
-    var text = '"message":{"text":"You can ask me a question like \'what kind of classes do you offer\' or \'how do I get to the studio\'."}';
-    sleep.sleep(2);
-    fbRichMessage(recipientId, text);
+    var content = GetText('./Responses/Help/HelpTextB.txt', 'Help Text B');
+    sleep.sleep(3);
+    fbRichMessage(sessions[text.sessionId].fbid, content);
   },
 
   HelpC(text) {
-    console.log('Help Text 3');
-    var recipientId = sessions[text.sessionId].fbid;
-    var text = '"message":{"text":"I can also put you in touch with a human operator if you type \'Human\'. Try it out!"}';
-    sleep.sleep(2);
-    fbRichMessage(recipientId, text);
+    var content = GetText('./Responses/Help/HelpTextC.txt', 'Help Text C');
+    sleep.sleep(3);
+    fbRichMessage(sessions[text.sessionId].fbid, content);
   },
 
   // Ok
   Ok(text) {
-    console.log('Ok Card');
-    var recipientId = sessions[text.sessionId].fbid;
-    var text = '"message":{"text":"Let me know if there\'s something else I can help you with!"}';
+    var content = GetText('./Responses/Ok/Ok.txt', 'Ok Card');
     sleep.sleep(3);
-    fbRichMessage(recipientId, text);
+    fbRichMessage(sessions[text.sessionId].fbid, content);
   },
 
   // Typing
   Typing(text) {
-    console.log('Typing Card');
-    var recipientId = sessions[text.sessionId].fbid;
-    var text = '"sender_action":"typing_on"';
-    fbRichMessage(recipientId, text);
+    var content = GetText('./Responses/Typing/Typing.txt', 'Typing Card'); 
+    fbRichMessage(sessions[text.sessionId].fbid, content);
+  },
+  
+  // Handover to Live
+  HandOverLive(text) {
+    var content = GetText('./Responses/Human/HandoverToLive.txt', 'Handover to Live'); 
+    fbHandOverMessage(sessions[text.sessionId].fbid, content);
+  },
+
+  // Handover to Bot
+  HandOverLive(text) {
+    var content = GetText('./Responses/Human/HandoverToBot.txt', 'Handover to Bot'); 
+    fbHandOverMessage(sessions[text.sessionId].fbid, content);
   },
     
     
