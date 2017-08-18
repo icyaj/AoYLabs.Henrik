@@ -293,11 +293,11 @@ const actions = {
     fbHandOverMessage(sessions[text.sessionId].fbid, content);
   },
 
-  // Handover to Bot
-  HandOverLive(text) {
-    var content = GetText('./Responses/Human/HandoverToBot.txt', 'Handover to Bot'); 
-    fbHandOverMessage(sessions[text.sessionId].fbid, content);
-  },
+  // Handover to Bot (Realised That You Can't ask for BOT while in the Bot)
+//  HandOverLive(text) {
+//    var content = GetText('./Responses/Human/HandoverToBot.txt', 'Handover to Bot'); 
+//    fbHandOverMessage(sessions[text.sessionId].fbid, content);
+//  },
     
     
 };
