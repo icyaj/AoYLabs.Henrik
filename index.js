@@ -100,11 +100,11 @@ const fbRichMessage = (id, json) => {
 };
 
 // Handover to Live 
-const fbHandOverMessage = (id, json) => {
+const fbHandOverMessage = (id, json, control) => {
   console.log('Handover to Live:' + id);
   var body = '{"recipient":{"id":"' + id + '"},' + json + '}';
   const qs = 'access_token=' + encodeURIComponent(FB_PAGE_TOKEN);
-  return fetch('https://graph.facebook.com/v2.6/me/pass_thread_control?' + qs, {
+  return fetch('https://graph.facebook.com/v2.6/me/' + control + '_thread_control?' + qs, {
     method: 'POST',
     headers: {'Content-Type': 'application/json'},
     body,
@@ -286,12 +286,16 @@ const actions = {
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
   
-  // Handover to Live,
+  // Handover to Live, After 12 hours will Return the Wheel.
   HandOverLive(text) {
     var content = GetText('./Responses/Human/HandoverText.txt', 'Handover Text'); 
     fbRichMessage(sessions[text.sessionId].fbid, content);
     var content = GetText('./Responses/Human/HandoverToLive.txt', 'Handover to Live'); 
-    fbHandOverMessage(sessions[text.sessionId].fbid, content);
+    fbHandOverMessage(sessions[text.sessionId].fbid, content, 'pass');
+    sleep.sleep(15);
+    var content = GetText('./Responses/Human/HandoverToBot.txt', 'Handover to Bot'); 
+    fbHandOverMessage(sessions[text.sessionId].fbid, content, 'take');
+    
   },
 
   // Handover to Bot (Realised That You Can't ask for BOT while in the Bot)
