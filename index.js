@@ -287,7 +287,7 @@ const actions = {
   },
   
   // Handover to Bot
-   const CheckOpen = (text) =>  {
+  HandOverBot(text) {
     sleep.sleep(15);
     var content = GetText('./Responses/Human/HandoverToBot.txt', 'Handover to Bot'); 
     fbHandOverMessage(sessions[text.sessionId].fbid, content, 'take'); 
