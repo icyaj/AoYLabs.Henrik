@@ -288,10 +288,10 @@ const actions = {
   
   // Handover to Bot
   HandOverBot(text) {
-    sleep.sleep(15);
-    delete sessions[text.sessionId];    
+    sleep.sleep(15);   
     var content = GetText('./Responses/Human/HandoverToBot.txt', 'Handover to Bot'); 
     fbHandOverMessage(sessions[text.sessionId].fbid, content, 'take'); 
+    delete sessions[text.sessionId]; 
   },
 
   // Handover to Live, After 12 hours will Return the Wheel.
