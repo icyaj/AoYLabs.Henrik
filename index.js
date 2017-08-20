@@ -299,7 +299,6 @@ const actions = {
     fbRichMessage(sessions[text.sessionId].fbid, content);
     var content = GetText('./Responses/Human/HandoverToLive.txt', 'Handover to Live'); 
     fbHandOverMessage(sessions[text.sessionId].fbid, content, 'pass');
-    HandOverBot(text);
   },
 
   // Handover to Bot (Realised That You Can't ask for BOT while in the Bot)
