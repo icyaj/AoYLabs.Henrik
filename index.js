@@ -287,12 +287,12 @@ const actions = {
   },
   
   // Handover to Bot
-  HandOverBot(text) {
+   var HandOverBot(text) {
     sleep.sleep(15);
     var content = GetText('./Responses/Human/HandoverToBot.txt', 'Handover to Bot'); 
-    fbHandOverMessage(sessions[text.sessionId].fbid, content, 'take');
-    
+    fbHandOverMessage(sessions[text.sessionId].fbid, content, 'take'); 
   },
+
   // Handover to Live, After 12 hours will Return the Wheel.
   HandOverLive(text) {
     var content = GetText('./Responses/Human/HandoverText.txt', 'Handover Text'); 
