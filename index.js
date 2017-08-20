@@ -290,7 +290,7 @@ const actions = {
   HandOverBot(text) {
     sleep.sleep(15);
     var userId = delete sessions[text.sessionId];
-    delete sessions[text.sessionId]; 
+    delete sessions[text.sessionId].context; 
     var content = GetText('./Responses/Human/HandoverToBot.txt', 'Handover to Bot'); 
     fbHandOverMessage(userId, content, 'take'); 
   },
