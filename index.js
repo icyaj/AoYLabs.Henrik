@@ -22,6 +22,7 @@ const request = require('request');
 const sleep = require('sleep');
 const moment = require('moment-timezone');
 const NodeFileParser = require('node-file-parser');
+const fs = require('fs');
 
 let Wit = null;
 let log = null;
@@ -154,11 +155,22 @@ const CheckOpen = () => {
 
 // Randomises Teachers to output 3 For Teacher Card.
 const GetTeachers = () => {
-   const fs = require('fs');
-   const dir = 'Responses/Teacher/Teachers';
-
-   fs.readdir(dir, (err, files) => {console.log(files.length);});
+   // Loads Teacher File Names.
+   var dir = 'Responses/Teacher/Teachers';
+   var TeacherContent = fs.readdir(dir, (err, files) => {return (files);});
+  
+   var ChosenTeacher = [];
     
+   // While loop to get 3 different random numbers.
+   while (i < 3) {
+    // Gets a random number between 1 and the Teacher Length.
+    Randint = Math.floor((Math.random() * TeacherContent.length) + 1);
+    if ( ChosenTeacher.indexOf( Randint ) == -1 ) { 
+        ChosenTeacher.push(TeacherContent[Randint]);
+        i++;
+    };
+    console.log(ChosenTeacher);
+   };
    //return content; 
 };
       
