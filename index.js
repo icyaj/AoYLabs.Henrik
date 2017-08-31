@@ -211,7 +211,9 @@ const actions = {
   // See https://wit.ai/docs/quickstart
     
   // MY CUSTOM CODE
-    
+
+  // To Do --> Scrape Teacher/Classes, Schedule & Booking from Website Using a Beautiful Soup for NodeJS.
+
   // Welcome Text Messages. Have to put them in seperate Functions or they may not send in right order.
   WelcomeTextA(text) {
     var content = GetText('./Responses/Welcome/WelcomeTextA.txt', 'Welcome Text A');
@@ -343,7 +345,7 @@ const actions = {
   // Handover to Bot
   HandOverBot(text) {
     sleep.sleep(60);
-    var userId = delete sessions[text.sessionId];
+    var userId = delete sessions[text.sessionId].context;
     delete sessions[text.sessionId].context; 
     var content = GetText('./Responses/Human/HandoverToBot.txt', 'Handover to Bot'); 
     fbHandOverMessage(userId, content, 'take'); 
