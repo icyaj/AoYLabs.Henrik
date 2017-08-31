@@ -16,7 +16,7 @@
                 "url": "https://artofyoga.sg/classes/ashtanga-mysore-style/",
                 "messenger_extensions": true,
                 "webview_height_ratio": "tall",
-                "fallback_url": "https://artofyoga.sg/"            
+                "fallback_url": "https://artofyoga.sg/classes/ashtanga-mysore-style/"            
               }
             ]
           },
@@ -31,7 +31,7 @@
                 "url": "https://artofyoga.sg/classes/vinyasa-yoga-flow-power-yoga/",
                 "messenger_extensions": true,
                 "webview_height_ratio": "tall",
-                "fallback_url": "https://artofyoga.sg"            
+                "fallback_url": "https://artofyoga.sg/classes/vinyasa-yoga-flow-power-yoga/"            
               }
             ]
           },
@@ -46,7 +46,7 @@
                 "url": "https://artofyoga.sg/classes/iyengar-yoga/",
                 "messenger_extensions": true,
                 "webview_height_ratio": "tall",
-                "fallback_url": "https://artofyoga.sg"            
+                "fallback_url": "https://artofyoga.sg/classes/iyengar-yoga/"            
               }
             ]        
           }
