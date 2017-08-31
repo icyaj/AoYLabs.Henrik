@@ -257,9 +257,9 @@ const actions = {
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
   
-  // Class Type / Teacher Card
-  ClassTypeTeacher(text) {
-    var content = GetText('./Responses/ClassTypes/AllClassType.txt', 'ClassType / Teacher Card');
+  // Class Type Card
+  ClassType(text) {
+    var content = GetText('./Responses/ClassTypes/AllClassType.txt', 'Class Type Card');
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
     

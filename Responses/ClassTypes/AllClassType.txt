@@ -3,17 +3,32 @@
       "type": "template",
       "payload": {
         "template_type": "list",
-        "top_element_style": "large",
+        "top_element_style": "compact",
         "elements": [
           {
-            "title": "Art of Yoga - Classes",
-            "subtitle": "Here are the other types of classes we offer: ",
-            "image_url": "https://artofyoga.sg/wp-content/uploads/2015/11/2.jpg",          
+            "title": "Ashtanga Mysore",
+            "subtitle": "Ashtanga yoga is an ancient form of yoga taught by Vamana Rishi in the Yoga Korunta. The Mysore style and method was passed down through the ages to Pattabhi Jois during his studies with Sri T. Krishnamacharya. The main components of Ashtanga yoga, as emphasised by Pattabhi Jois are; Vinyasa, Tristhana and the Six Poisons.",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/01/AoY-Fullsize-0483.jpg",          
             "buttons": [
               {
-                "title": "View",
+                "title": "Details",
                 "type": "web_url",
-                "url": "https://artofyoga.sg/all-classes/",
+                "url": "https://artofyoga.sg/classes/ashtanga-mysore-style/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg/"            
+              }
+            ]
+          },
+          {
+            "title": "Vinyasa Yoga (Flow / Power)",
+            "subtitle": "Vinyasa Yoga (aka Vinyasa Flow / Power Yoga), refers to a practice that synchronises movement and breath and derives its roots from Sri K. Patthabhi Jois’ Ashtanga yoga method. It is a relatively modern style of yoga that can be both dynamic and physically challenging. This class contains a series of postures that flow naturally from one to the next. Focus is placed on movement, alignment, flexibility, strength and integration with breath. Poses are held for shorter duration than in a Hatha Yoga or Hatha Flow class.",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/01/AoY-Fullsize-0329.jpg",          
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/classes/vinyasa-yoga-flow-power-yoga/",
                 "messenger_extensions": true,
                 "webview_height_ratio": "tall",
                 "fallback_url": "https://artofyoga.sg"            
@@ -21,21 +36,28 @@
             ]
           },
           {
-            "title": "Art of Yoga - Teachers",
-            "subtitle": "Our teachers have over 35 years of teaching in a variety of disciplines and styles. Here are some of them: ",
-                     
+            "title": "Iyengar Yoga",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/02/iyengar-class-2.jpg",
+            "subtitle": "By paying close attention to anatomical details and the alignment of each posture, Iyengar Yoga is the practice of precision. Poses are held for long periods and often modified with props. This method is designed to systematically cultivate strength, flexibility, stability, and awareness, and can be therapeutic for specific conditions.",
             "buttons": [
               {
-                "title": "View",
+                "title": "Details",
                 "type": "web_url",
-                "url": "https://artofyoga.sg/teachers/",
+                "url": "https://artofyoga.sg/classes/iyengar-yoga/",
                 "messenger_extensions": true,
                 "webview_height_ratio": "tall",
                 "fallback_url": "https://artofyoga.sg"            
               }
-            ]
+            ]        
           }
-        ]
+        ],
+         "buttons": [
+          {
+            "type":"web_url",
+            "url":"https://artofyoga.sg/classes/",
+            "title":"View More"
+          }
+        ]  
       }
     }
   }
