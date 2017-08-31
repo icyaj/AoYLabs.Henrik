@@ -158,7 +158,7 @@ const GetTeachers = () => {
    // Loads Teacher File Names.
    var dir = 'Responses/Teacher/Teachers';
    var TeacherContent = fs.readdir(dir, (err, files) => {return (files);});
-  
+   var i = 0;
    var ChosenTeacher = [];
     
    // While loop to get 3 different random numbers.
