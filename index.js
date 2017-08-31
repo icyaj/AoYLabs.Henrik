@@ -302,6 +302,12 @@ const actions = {
     var content = GetText('./Responses/FAQ/SharePass.txt', 'FAQ Share Pass');
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
+  
+  // Cancellation Policy FAQ
+  CancellationPolicyFAQ(text) {
+    var content = GetText('./Responses/FAQ/CancellationPolicy.txt', 'FAQ Cancellation Policy');
+    fbRichMessage(sessions[text.sessionId].fbid, content);
+  },
 
   // Ok
   Ok(text) {
