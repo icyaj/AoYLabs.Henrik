@@ -342,7 +342,7 @@ const actions = {
   
   // Handover to Bot
   HandOverBot(text) {
-    sleep.sleep(15);
+    sleep.sleep(60);
     var userId = delete sessions[text.sessionId];
     delete sessions[text.sessionId].context; 
     var content = GetText('./Responses/Human/HandoverToBot.txt', 'Handover to Bot'); 
