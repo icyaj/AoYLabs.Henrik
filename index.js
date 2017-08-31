@@ -329,6 +329,12 @@ const actions = {
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
 
+  // Class Cost
+  ClassCostFAQ(text) {
+    var content = GetText('./Responses/FAQ/ClassCost.txt', 'FAQ Class Cost');
+    fbRichMessage(sessions[text.sessionId].fbid, content);
+  },
+
   // Ok
   Ok(text) {
     var content = GetText('./Responses/Ok/Ok.txt', 'Ok Card');
