@@ -290,6 +290,12 @@ const actions = {
     var content = GetText('./Responses/FAQ/NoPassAccount.txt', 'FAQ No Pass Account');
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
+    
+  // Email Acknowledgment FAQ
+  EmailAcknowledgmentFAQ(text) {
+    var content = GetText('./Responses/FAQ/EmailAcknowledgment.txt', 'FAQ Email Acknowledgment');
+    fbRichMessage(sessions[text.sessionId].fbid, content);
+  },
 
   // Ok
   Ok(text) {

@@ -1,0 +1,4 @@
+ "message":{
+  	"text":" It is because you didn't tick " Subscribe to email reminders & notifications" box when
+ you registered. If you would like this updated, please email us at info@artofyoga.sg"
+  }
