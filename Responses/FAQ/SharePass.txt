@@ -1,0 +1,3 @@
+"message":{
+  	"text":"Passes can only be shared between parents and their dependent children to a maximum age of 17"
+  }

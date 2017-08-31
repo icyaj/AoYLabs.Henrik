@@ -296,6 +296,12 @@ const actions = {
     var content = GetText('./Responses/FAQ/EmailAcknowledgment.txt', 'FAQ Email Acknowledgment');
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
+  
+  // Share Pass FAQ
+  SharePassFAQ(text) {
+    var content = GetText('./Responses/FAQ/SharePass.txt', 'FAQ Share Pass');
+    fbRichMessage(sessions[text.sessionId].fbid, content);
+  },
 
   // Ok
   Ok(text) {
