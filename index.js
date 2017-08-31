@@ -314,6 +314,12 @@ const actions = {
     var content = GetText('./Responses/FAQ/BringClass.txt', 'FAQ Bring Class');
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
+ 
+  // Pass Expiry FAQ
+  PassExpiryFAQ(text) {
+    var content = GetText('./Responses/FAQ/PassExpiry.txt', 'FAQ Pass Expiry');
+    fbRichMessage(sessions[text.sessionId].fbid, content);
+  },
 
   // Ok
   Ok(text) {

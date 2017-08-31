@@ -1,0 +1,3 @@
+"message":{
+  	"text":"Passes may be extended an additional six months from date of expiry for a fee of $50."
+  }
