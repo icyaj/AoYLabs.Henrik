@@ -3,7 +3,7 @@
       "type":"template",
       "payload":{
         "template_type":"button",
-        "text":"Trial classes are free & single classes cost $30. There are also 10+ class packages available, click the link below to find out more.",
+        "text":"Trial classes are free & you can purchase single or 10+ class packages. Click the link below to find out more.",
         "buttons":[
           {
             "type":"web_url",
