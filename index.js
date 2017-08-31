@@ -245,7 +245,7 @@ const actions = {
   
   // Are You Open
   OperatingHours(text) {
-    var content = GetText('./Responses/OpeningHours/OperatingHours.txt', 'Operating Hours Card');
+    var content = GetText('./Responses/OpeningHours/OperationHours.txt', 'Operating Hours Card');
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
     
