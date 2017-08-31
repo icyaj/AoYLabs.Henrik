@@ -158,7 +158,7 @@ const GetTeachers = () => {
    const dir = '/Teacher/Teachers';
 
    fs.readdir(dir, (err, files) => {
-   console.log(files.length);});
+   console.log(files);});
     
    //return content; 
 };
