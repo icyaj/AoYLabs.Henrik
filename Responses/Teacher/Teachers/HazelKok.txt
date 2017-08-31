@@ -1,0 +1,15 @@
+{
+            "title": "Hazel Kok",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/03/IMG_0093-820x400.jpeg",
+            "subtitle": "Hazel Kok used to have bad posture, constant backache and anxiety issues. After discovering yoga, she has learnt how listen to her body and take care of it. With regular practice, her health condition has improved and she is now more mindful on how to treat her body with healthier diet, sufficient rest and exercise regime.",
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/teachers/hazel-kok/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg/teachers/hazel-kok/"            
+              }
+            ]        
+          }

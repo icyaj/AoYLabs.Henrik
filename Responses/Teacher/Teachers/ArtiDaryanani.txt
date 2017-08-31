@@ -1,0 +1,15 @@
+{
+            "title": "Arti Daryanani",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/03/arti-820x400.jpg",
+            "subtitle": "Arti Daryanani is a wellness practitioner and life coach, and a firm believer in wellness through movement. An experienced yoga and meditation instructor of almost 20 years, Arti is also certified in the Yamuna® Body Rolling method and GYROKINESIS® exercise, both new and innovative methods that combine deep physical and mental-emotional release. As a busy working mother, Arti understands the frantic pace of our multi-tasking society, and the stress that",
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/teachers/arti-daryanani/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg/teachers/arti-daryanani/"            
+              }
+            ]        
+          }

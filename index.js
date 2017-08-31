@@ -152,8 +152,15 @@ const CheckOpen = () => {
     return opencloseTime; 
 };
 
-const OpenNextDay = () => {
+// Randomises Teachers to output 3 For Teacher Card.
+const GetTeachers = () => {
+   const fs = require('fs');
+   const dir = '/Teacher/Teachers';
+
+   fs.readdir(dir, (err, files) => {
+   console.log(files.length);});
     
+   //return content; 
 };
       
 // ----------------------------------------------------------------------------
@@ -240,8 +247,8 @@ const actions = {
     
   // Are You Open
   AreYouOpen(text) {
-    var content = GetText('./Responses/OpeningHours/OpenClose.txt', 'Are You Open Card'); 
-    var content = content + CheckOpen() + '" }';
+    var Front = GetText('./Responses/OpeningHours/OpenClose.txt', 'Are You Open Card'); 
+    var content = Front + CheckOpen() + '" }';
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
   
@@ -261,6 +268,15 @@ const actions = {
   ClassType(text) {
     var content = GetText('./Responses/ClassTypes/AllClassType.txt', 'Class Type Card');
     fbRichMessage(sessions[text.sessionId].fbid, content);
+  },
+    
+  // Teacher Type Card
+  ClassType(text) {
+    var Front = GetText('./Responses/Teacher/TeacherCardFront.txt', 'Teacher Card Front'); 
+    var Back = GetText('./Responses/Teacher/TeacherCardBack.txt', 'Teacher Card Back');
+    GetTeachers();
+    //var content = Front + GetTeachers() + Back;
+    //fbRichMessage(sessions[text.sessionId].fbid, content);
   },
     
   // Help Cards

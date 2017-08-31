@@ -1,0 +1,15 @@
+{
+            "title": "Nadira Mohsin",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/01/nadira-mohsin-1-820x400.png",
+            "subtitle": "Nadira Mohsin is a KPJAYI authorized Asthanga Yoga Teacher and Co-Founder/Director at Singapore’s Art of Yoga (AoY).",
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/teachers/nadira-mohsin/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg/teachers/nadira-mohsin/"            
+              }
+            ]        
+          }

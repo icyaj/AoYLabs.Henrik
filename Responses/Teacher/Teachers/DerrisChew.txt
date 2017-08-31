@@ -1,0 +1,15 @@
+{
+            "title": "Derris Chew",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/02/IMG_1697-e1485939551607-820x400.jpg",
+            "subtitle": "Derris Chew started yoga in Shanghai in 2005 with the intention of relieving ailments in his lower back; he got more than that from his first yoga class. His first yoga class was an Ashtanga class; 90 minutes and buckets of sweat later, Derris was hooked, and that got Derris started on his yoga journey.",
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/teachers/derris-chew/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg/teachers/derris-chew/"            
+              }
+            ]        
+          }

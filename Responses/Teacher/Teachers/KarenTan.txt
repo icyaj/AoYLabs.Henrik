@@ -1,0 +1,15 @@
+{
+            "title": "Karen Tan",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/03/karen-tan-main-820x400.jpg",
+            "subtitle": "Karen Tan is a dedicated Yoga practitioner since 2003, and believes happiness in life comes when all elements are in a state of balance.",
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/teachers/karen-tan/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg/teachers/karen-tan/"            
+              }
+            ]        
+          }

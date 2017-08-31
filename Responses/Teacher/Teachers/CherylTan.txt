@@ -1,0 +1,15 @@
+{
+            "title": "Cheryl Tan",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/01/cheryl-tan-720x400.jpeg",
+            "subtitle": "Cheryl Tan is an engager, inspirer, and adventure seeker. Even though she first discovered yoga during her undergraduate studies, it took a few years before her practice moved beyond the physical realm. Under the tutelage of her teachers, she discovered the immense potential yoga has to awaken our physical, emotional and spiritual psyches. Having been labelled as a troubled youth in her teens, her committed practice enables her go beyond her limited beliefs, self-regulate when triggers arise, and be an empowered individual. She believes in practicing and teaching yoga from a place of compassion, empathy and most importantly — love. She is the founder of The Breathe Movement, a social organisation that reaches out to at-risk girls and women using yoga-based tools. Cheryl continues to study under Scott Petrie and Seane Corn.",
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/teachers/cheryl-tan/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg/teachers/cheryl-tan/"            
+              }
+            ]        
+          }

@@ -1,0 +1,15 @@
+{
+            "title": "Candy Dang",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/02/IMG_5652-820x400.jpg",
+            "subtitle": "Candy has been practicing yoga for over 10 years. The first two years on the mat were tentative and hesitant, foraging into back bends and inversions that needed courage and bravery! Each and every practice got her further away from her fears, and filled her with more joy and liberation as she gained more confidence in her practice. Yoga has helped her to relieve from stress and improve her concentration in daily life. By practicing yoga daily, Candy has managed to heal her back pains which she used to suffer from since she was very young.",
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/teachers/candy-dang/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg/teachers/candy-dang/"            
+              }
+            ]        
+          }

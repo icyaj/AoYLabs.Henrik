@@ -1,0 +1,15 @@
+{
+            "title": "Athena Bakar",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/03/athena-baker-820x400.jpg",
+            "subtitle": "Athena Bakar has never been able to stay put in a place for too long. She often finds herself wandering in another country for months at a time, one of which led her to Rishikesh, India to attain her 500hr certificate. She truly believes her yoga mat is her home and hopes her students feel the same sense of security and solace she feels when they get onto their mat. At Art of Yoga she teaches both the Vinyasa Flow and Yin Yoga classes in addition to assisting with the new AoY retail space.",
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/teachers/athena-bakar/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg/teachers/athena-bakar/"            
+              }
+            ]        
+          }

@@ -1,0 +1,15 @@
+{
+            "title": "TEACHER NAME",
+            "image_url": "TEACHER PROFILE PICTURE URL",
+            "subtitle": "TEACHER BIO",
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "TEACHER URL",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "TEACHER URL (HAS TO BE SAME AS URL AS URL FB SOMETIMES USES FALLBACK_URL INSTEAD OF URL )"            
+              }
+            ]        
+          }

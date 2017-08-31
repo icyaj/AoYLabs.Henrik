@@ -1,0 +1,15 @@
+{
+            "title": "Joy Tan",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/01/joy-tan-804x400.png",
+            "subtitle": "Joy Tan is a self-proclaimed couch potato that was never really physically active until her late teens. Her first yoga class traces back eight years ago in a hot room, where she landed herself in, in a bid to lose weight. Despite being inflexible and shaky throughout the entire session, she could not forget that sense of euphoria and achievement that swelled after the class. Joy kept to a consistent home practice and years later in 2013, took her 200-hr yoga teacher training certificate and has been teaching ever since.",
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/teachers/joy-tan/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg/teachers/joy-tan/"            
+              }
+            ]        
+          }

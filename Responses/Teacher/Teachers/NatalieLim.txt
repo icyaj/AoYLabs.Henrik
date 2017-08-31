@@ -1,0 +1,15 @@
+{
+            "title": "Natalie Lim",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/06/natalie-2-820x400.jpeg",
+            "subtitle": "Natalie Lim has been practicing yoga since 2012. Her journey began with Ashtanga yoga whilst working in the corporate world. What started as a workout turned into a lifestyle and she decided that she wanted to teach yoga as this would allow her to do something she is passionate about and also help others lead healthier lifestyle by practising yoga. It is this passion that has helped her grow so much in such a short time.",
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/teachers/natalie-lim/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg/teachers/natalie-lim/"            
+              }
+            ]        
+          }

@@ -1,0 +1,15 @@
+{
+            "title": "Shanice Soh",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/05/Shanice_AOY-820x400.jpg",
+            "subtitle": "Shanice Soh discovered yoga in her early adult years and only realised that her yoga practice has evolved beyond the physical aspects when she found herself turning to the mat again and again, just how it feels like returning home. She believes that yoga nurtures the physical body and mind and can be enriching and healing when practised with an open mind. To her, the beauty of yoga is that it is for everyone. It can be anything to anyone, you get what you need from yoga.",
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/teachers/shanice-soh/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg/teachers/shanice-soh/"            
+              }
+            ]        
+          }

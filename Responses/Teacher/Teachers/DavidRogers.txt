@@ -1,0 +1,15 @@
+{
+            "title": "David Rogers",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/06/david-headshot-820x400.jpg",
+            "subtitle": "David Rogers received his first yoga teaching certification from the Bikram Yoga College of India in 2002. From 2003-2008 he directed and co-owned Bikram Yoga, Albuquerque, and from 2009-2012 David taught Bikram Yoga in Singapore, Malaysia and Thailand. In 2012 he began studying Ashtanga Yoga at The Yoga Shala Singapore, and in 2016 was authorized to teach the Ashtanga system by Sharath Jois at the Shri K. Pattabhi Jois Ashtanga Yoga Institute in Mysore, India.",
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/teachers/david-rogers/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg/teachers/david-rogers/"            
+              }
+            ]        
+          }

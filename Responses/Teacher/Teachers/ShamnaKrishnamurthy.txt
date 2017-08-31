@@ -1,0 +1,15 @@
+{
+            "title": "Shamna Krishnamurthy",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/02/Profile-Pic-e1485947372882-720x400.jpg",
+            "subtitle": "Shamna Krishnamurthy was born and brought up in Mysore-India. Being a Bandminton player, she always wanted to improve her body flexibility, that would eventually improve her game. So, she started practicing yoga. Very soon she realized it was not just flexibility, she was getting stronger mentally, physically and emotionally.",
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/teachers/shamna-krishnamurthy/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg/teachers/shamna-krishnamurthy/"            
+              }
+            ]        
+          }

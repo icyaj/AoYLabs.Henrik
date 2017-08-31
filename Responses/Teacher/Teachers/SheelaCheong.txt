@@ -1,0 +1,15 @@
+{
+            "title": "Sheela Cheong",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/02/sheela-cheong.png",
+            "subtitle": "Sheela Cheong found yoga in 2008 at the University of California where she was doing her graduate studies in Sociology. Her teacher was a former student of BKS Iyengar and integrated her Iyengar practice with principles of TCM, Qi Gong and Ayurveda. As she began a daily practice, Sheela found that yoga and academia seemed to occupy two very different worlds. Although she still loves the world of words, she became increasingly drawn to working with and understanding the body. After returning to Asia, she earned her teacher’s certification and has been teaching yoga ever since. Her favourite quote is from Nietzsche: ‘There is more wisdom in your body than in your deepest philosophy.’ It is her hope to awaken this inner wisdom in every one of her students.",
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/teachers/sheela-cheong/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg/teachers/sheela-cheong/"            
+              }
+            ]        
+          }
