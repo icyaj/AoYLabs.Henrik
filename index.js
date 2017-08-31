@@ -271,7 +271,7 @@ const actions = {
   },
     
   // Teacher Type Card
-  Teacher(text) {
+  TeacherType(text) {
     var Front = GetText('./Responses/Teacher/TeacherCardFront.txt', 'Teacher Card Front'); 
     var Back = GetText('./Responses/Teacher/TeacherCardBack.txt', 'Teacher Card Back');
     GetTeachers();
