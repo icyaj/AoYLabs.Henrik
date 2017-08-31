@@ -1,0 +1,3 @@
+"message":{
+  	"text":"Thank you for your purchase. It takes a bit longer for the package to be reflected in your account as it is a manual process done by the admin team here at Art of Yoga. Please bear with us and your package will be credited to your account within 12 hours of purchase."
+  }
