@@ -155,7 +155,7 @@ const CheckOpen = () => {
 // Randomises Teachers to output 3 For Teacher Card.
 const GetTeachers = () => {
    const fs = require('fs');
-   const dir = '/Teacher/Teachers';
+   const dir = './Teacher/Teachers';
 
    fs.readdir(dir, (err, files) => {
    console.log(files);});
