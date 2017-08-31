@@ -308,6 +308,12 @@ const actions = {
     var content = GetText('./Responses/FAQ/CancellationPolicy.txt', 'FAQ Cancellation Policy');
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
+ 
+  // Bring Class FAQ
+  BringClassFAQ(text) {
+    var content = GetText('./Responses/FAQ/BringClass.txt', 'FAQ Bring Class');
+    fbRichMessage(sessions[text.sessionId].fbid, content);
+  },
 
   // Ok
   Ok(text) {

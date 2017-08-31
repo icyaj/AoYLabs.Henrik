@@ -1,0 +1,4 @@
+"message":{
+  	"text":"Yoga mats and props are provided, although you are most welcome to bring your own
+ if you prefer. Please bring your own towel."
+  }
