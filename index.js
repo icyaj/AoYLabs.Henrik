@@ -272,6 +272,13 @@ const actions = {
     sleep.sleep(3);
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
+  
+  // Beginner FAQ
+
+  BeginnerFAQ(text) {
+    var content = GetText('./Responses/FAQ/BeginnerClass.txt', 'FAQ Beginner Class');
+    fbRichMessage(sessions[text.sessionId].fbid, content);
+  },
 
   // Ok
   Ok(text) {

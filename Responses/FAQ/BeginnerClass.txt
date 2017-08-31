@@ -1,0 +1,16 @@
+"message":{
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"Most of our classes are multi-level and suitable for beginners. Just remember to inform the teacher before-hand that you are a beginner and if you have any injuries or health conditions. The teacher will then modify the poses for you.",
+        "buttons":[
+          {
+            "type":"web_url",
+            "url":"https://artofyoga.sg/book/",
+            "title":"Register Online"
+          }
+        ]
+      }
+    }
+  }
