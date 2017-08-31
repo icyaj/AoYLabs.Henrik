@@ -344,8 +344,8 @@ const actions = {
   
   // Handover to Bot
   HandOverBot(text) {
-    sleep.sleep(60);
-    var userId = delete sessions[text.sessionId].context;
+    sleep.sleep(30);
+    var userId = sessions[text.sessionId].fbid;
     delete sessions[text.sessionId].context; 
     var content = GetText('./Responses/Human/HandoverToBot.txt', 'Handover to Bot'); 
     fbHandOverMessage(userId, content, 'take'); 
