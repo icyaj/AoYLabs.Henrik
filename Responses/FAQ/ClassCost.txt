@@ -3,7 +3,8 @@
       "type":"template",
       "payload":{
         "template_type":"button",
-        "text":"Trial classes are free & single classes cost $30. There are also 10+ class packages available, click the link below to find out more.":[
+        "text":"Trial classes are free & single classes cost $30. There are also 10+ class packages available, click the link below to find out more.",
+        "buttons":[
           {
             "type":"web_url",
             "url":"https://artofyoga.sg/fees/",
