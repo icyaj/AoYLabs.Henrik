@@ -1,0 +1,16 @@
+"message":{
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"You can register and book yourself a mat from our site in the link below and show up on the day of your booking. Your first class at Art of Yoga is a free trial so there is no payment required.",
+        "buttons":[
+          {
+            "type":"web_url",
+            "url":"https://artofyoga.sg/book/",
+            "title":"Book Free Trial"
+          }
+        ]
+      }
+    }
+  }

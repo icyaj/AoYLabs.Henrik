@@ -274,9 +274,14 @@ const actions = {
   },
   
   // Beginner FAQ
-
   BeginnerFAQ(text) {
-    var content = GetText('./Responses/FAQ/BeginnerClass.txt', 'FAQ Beginner Class');
+    var content = GetText('./Responses/Booking/BeginnerClass.txt', 'FAQ Beginner Class');
+    fbRichMessage(sessions[text.sessionId].fbid, content);
+  },
+
+  // Free Trial FAQ
+  FreeTrialFAQ(text) {
+    var content = GetText('./Responses/Booking/FreeTrial.txt', 'FAQ Free Trial Class');
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
 
