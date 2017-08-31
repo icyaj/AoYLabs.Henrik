@@ -236,10 +236,16 @@ const actions = {
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
     
-  // Operating Hours
-  OperatingHours(text) {
-    var content = GetText('./Responses/OpeningHours/OpenClose.txt', 'Operating Hours Card'); 
+  // Are You Open
+  AreYouOpen(text) {
+    var content = GetText('./Responses/OpeningHours/OpenClose.txt', 'Are You Open Card'); 
     var content = content + CheckOpen() + '" }';
+    fbRichMessage(sessions[text.sessionId].fbid, content);
+  },
+  
+  // Are You Open
+  OperatingHours(text) {
+    var content = GetText('./Responses/OpeningHours/OperatingHours.txt', 'Operating Hours Card');
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
     
