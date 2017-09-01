@@ -157,9 +157,9 @@ const CheckOpen = () => {
 const GetTeachers = () => {
    // Loads Teacher File Names.
    var dir = 'Responses/Teacher/Teachers';
-   var Teacher = [];
+   var this.Teacher = [];
    fs.readdir(dir, (err, files) => {files.forEach(file => {GetTeachers.Teacher.push(file);});})
-   console.log(Teacher); 
+   console.log(this.Teacher); 
    // Init Variables
    var i = 0;
    var ChosenTeacher = [];
