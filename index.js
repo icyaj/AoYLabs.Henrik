@@ -175,7 +175,6 @@ const GetTeachers = () => {
     //    console.log("i++: " + i++);
     };
     console.log(ChosenTeacher);
-   };
    //return content; 
 };
       
