@@ -157,9 +157,8 @@ const CheckOpen = () => {
 const GetTeachers = () => {
    // Loads Teacher File Names.
    var dir = 'Responses/Teacher/Teachers';
-   fs.readdir(dir, (err, files) => {console.log(files.length);});
    //var TeacherContent = fs.readdir(dir, (err, files) => {return (files);});
-   console.log(fs.readdir(dir, (err, files) => {console.log(files.length);}));  
+   fs.readdir(dir, (err, files) => {console.log("123: " + files.length);});  
    // Init Variables
    var i = 0;
    var ChosenTeacher = [];
