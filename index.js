@@ -159,17 +159,18 @@ const GetTeachers = () => {
    var dir = 'Responses/Teacher/Teachers';
    var TeacherLength = fs.readdir(dir, (err, files) => {return (files.length);});
    var TeacherContent = fs.readdir(dir, (err, files) => {return (files);});
-   console.log(TeacherLength); 
+   console.log(TeacherContent); 
    // Init Variables
    var i = 0;
    var ChosenTeacher = [];
+   var FirstRun = true;
     
    // While loop to get 3 different random numbers.
    while (i < 3) {
     // Gets a random number between 1 and the Teacher Length.
     var Randint = Math.floor((Math.random() * 3) + 1);
     console.log("Randint: " + Randint);
-    if ( ChosenTeacher.indexOf( Randint ) == -1 ) { 
+    if ( ChosenTeacher.indexOf( Randint ) === -1 ) { 
         ChosenTeacher.push(TeacherContent[Randint]);
         console.log("Randint: " + Randint);
         i++;
