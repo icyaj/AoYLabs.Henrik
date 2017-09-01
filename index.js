@@ -157,7 +157,7 @@ const CheckOpen = () => {
 const GetTeachers = () => {
    // Loads Teacher File Names.
    var dir = 'Responses/Teacher/Teachers';
-   fs.readdir(testFolder, (err, files) => {files.forEach(file => {console.log(file);});})
+   fs.readdir(dir, (err, files) => {files.forEach(file => {console.log(file);});})
     
    // Init Variables
    var i = 0;
