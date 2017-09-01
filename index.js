@@ -156,8 +156,8 @@ const CheckOpen = () => {
 // Randomises Teachers to output 3 For Teacher Card.
 const GetTeachers = () => {
    // Loads Teacher File Names.
-   var this.dir = 'Responses/Teacher/Teachers';
-   var this.Teacher = [];
+   this.dir = 'Responses/Teacher/Teachers';
+   this.Teacher = [];
    fs.readdir(this.dir, (err, files) => {files.forEach(file => {GetTeachers.Teacher.push(file);});})
    console.log(this.Teacher); 
    // Init Variables
