@@ -169,10 +169,10 @@ const GetTeachers = () => {
     // Gets a random number between 1 and the Teacher Length. parseInt(TeacherLength)
     var Randint = Math.floor((Math.random() * 14) + 1);
     console.log("Randint: " + Randint);
-    if ( ChosenTeacher.indexOf( Randint ) == -1 ) { 
-        ChosenTeacher.push(TeacherContent[Randint]);
+    //if ( ChosenTeacher.indexOf( Randint ) == -1 ) { 
+    //    ChosenTeacher.push(TeacherContent[Randint]);
         i++;
-        console.log("i++: " + i++);
+    //    console.log("i++: " + i++);
     };
     console.log(ChosenTeacher);
    };
