@@ -171,7 +171,7 @@ const GetTeachers = () => {
     var Randint = Math.floor((Math.random() * 14) + 1);
     console.log("Randint: " + Randint);
     //if ( ChosenTeacher.indexOf( Randint ) === -1 ) { 
-        ChosenTeacher.push(TeacherContent[Randint]);
+        ChosenTeacher.push(ChosenTeacher[Randint]);
     //    console.log("Randint: " + Randint);
         i++;
     //};
