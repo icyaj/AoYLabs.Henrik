@@ -174,7 +174,7 @@ const GetTeachers = () => {
         ChosenTeacher.push(TeacherContent[Randint]);
     //    console.log("Randint: " + Randint);
         i++;
-    };
+    //};
     console.log("Teacher Array: " + ChosenTeacher);
    };
    //return content; 
