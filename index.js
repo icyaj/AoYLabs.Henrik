@@ -158,7 +158,7 @@ const GetTeachers = () => {
    // Loads Teacher File Names.
    var dir = 'Responses/Teacher/Teachers';
    var Teacher = [];
-   fs.readdir(dir, (err, files) => {Teacher.push(files.forEach(file => {console.log(file);});)})
+   fs.readdir(dir, (err, files) => {Teacher.push(files.forEach(file => {console.log(file);});)});
    console.log(Teacher);
    // Init Variables
    var i = 0;
