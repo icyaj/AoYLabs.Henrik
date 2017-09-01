@@ -157,18 +157,18 @@ const CheckOpen = () => {
 const GetTeachers = () => {
    // Loads Teacher File Names.
    var dir = 'Responses/Teacher/Teachers';
-   var TeacherLength = fs.readdir(dir, (err, files) => {return (files.length);});
-   var TeacherContent = fs.readdir(dir, (err, files) => {return (files);});
-   console.log(fs.readdir(dir, (err, files))); 
+   //var TeacherLength = fs.readdir(dir, (err, files) => {return (files.length);});
+   //var TeacherContent = fs.readdir(dir, (err, files) => {return (files);});
+   //console.log(fs.readdir(dir, (err, files))); 
+    
    // Init Variables
    var i = 0;
    var ChosenTeacher = [];
-   var FirstRun = true;
     
    // While loop to get 3 different random numbers.
    while (i < 3) {
     // Gets a random number between 1 and the Teacher Length.
-    var Randint = Math.floor((Math.random() * 3) + 1);
+    var Randint = Math.floor((Math.random() * 14) + 1);
     console.log("Randint: " + Randint);
     //if ( ChosenTeacher.indexOf( Randint ) === -1 ) { 
         ChosenTeacher.push(TeacherContent[Randint]);
