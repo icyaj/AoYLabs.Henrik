@@ -159,7 +159,7 @@ const GetTeachers = () => {
    var dir = 'Responses/Teacher/Teachers';
    var TeacherLength = fs.readdir(dir, (err, files) => {return (files.length);});
    var TeacherContent = fs.readdir(dir, (err, files) => {return (files);});
-   console.log(fs.readdir(dir, (err, files)); 
+   console.log(fs.readdir(dir, (err, files))); 
    // Init Variables
    var i = 0;
    var ChosenTeacher = [];
