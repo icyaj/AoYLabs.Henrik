@@ -165,26 +165,24 @@ const CheckOpen = () => {
 // Randomises Teachers to output 3 For Teacher Card.
 const GetTeachers = () => {
    // Loads Teacher File Names.
-   var dir = 'Responses/Teacher/Teachers';
-   var Teacher = [];
-   fs.readdir(dir, (err, files) => {files.forEach(file => {console.log(file);})});
-   //console.log("The Previous value is: " + $log); 
+   var Teacher = ["ArtiDaryanani","AthenaBakar","CandyDang","CherylTan","DavidRogers","DerrisChew","HazelKok","JoyTan","KarenTan","NadiraMohsin","NatalieLim","ShamnaKrishnamurthy","ShaniceSoh","SheelaCheong"];
+
    // Init Variables
    var i = 0;
    var ChosenTeacher = [];
     
    // While loop to get 3 different random numbers.
-   //while (i < 3) {
+   while (i < 3) {
     // Gets a random number between 1 and the Teacher Length.
-    //var Randint = Math.floor((Math.random() * 14) + 1);
-    //console.log("Randint: " + Randint);
-    //if ( ChosenTeacher.indexOf( Randint ) === -1 ) { 
-    //    ChosenTeacher.push(ChosenTeacher[Randint]);
-    //    console.log("Randint: " + Randint);
-    //    i++;
-    //};
-    //console.log("Teacher Array: " + ChosenTeacher);
- //  };
+    var Randint = Math.floor((Math.random() * Teacher.length) + 1);
+    console.log("Randint: " + Randint);
+    if ( ChosenTeacher.indexOf( Teacher[Randint] ) === -1 ) { 
+        ChosenTeacher.push(Teacher[Randint]);
+        console.log("Randint: " + Randint);
+        i++;
+    };
+    console.log("Teacher Array: " + ChosenTeacher);
+   };
    //return content; 
 };
       
