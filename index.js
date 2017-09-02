@@ -166,7 +166,7 @@ const GetTeachers = () => {
    // Loads Teacher File Names.
    dir = 'Responses/Teacher/Teachers';
    Teacher = [];
-   fs.readdir(dir, (err, files) => {files.forEach(file => {console.log(file);})};
+   fs.readdir(dir, (err, files) => {files.forEach(file => {console.log(file);})});
    console.log("The Previous value is: " + $log); 
    // Init Variables
    var i = 0;
