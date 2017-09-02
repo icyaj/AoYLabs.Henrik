@@ -172,9 +172,12 @@ const GetTeachers = () => {
         console.log("Randint: " + Randint);
         i++;
     };
-    console.log("Teacher Array: " + ChosenTeacher);
    };
-   //return content; 
+   console.log("The chosen teachers are: " + ChosenTeacher);
+    
+   // Now going to append the teacher cards together into one.
+   var content = (GetText(ChosenTeacher[0]+".txt","Fetching Teacher 1 Card") + ";" + GetText(ChosenTeacher[1]+".txt","Fetching Teacher 2 Card") + ";" + GetText(ChosenTeacher[2]+".txt","Fetching Teacher 3 Card"));
+   return content; 
 };
       
 // ----------------------------------------------------------------------------
@@ -288,9 +291,8 @@ const actions = {
   TeacherType(text) {
     var Front = GetText('./Responses/Teacher/TeacherCardFront.txt', 'Teacher Card Front'); 
     var Back = GetText('./Responses/Teacher/TeacherCardBack.txt', 'Teacher Card Back');
-    GetTeachers();
-    //var content = Front + GetTeachers() + Back;
-    //fbRichMessage(sessions[text.sessionId].fbid, content);
+    var content = Front + GetTeachers() + Back;
+    fbRichMessage(sessions[text.sessionId].fbid, content);
   },
     
   // Help Cards
