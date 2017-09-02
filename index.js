@@ -165,7 +165,7 @@ const GetTeachers = () => {
    // While loop to get 3 different random numbers.
    while (i < 3) {
     // Gets a random number between 1 and the Teacher Length.
-    var Randint = Math.floor((Math.random() * Teacher.length) + 1);
+    var Randint = Math.floor((Math.random() * Teacher.length));
     console.log("Randint: " + Randint);
     if ( ChosenTeacher.indexOf( Teacher[Randint] ) === -1 ) { 
         ChosenTeacher.push(Teacher[Randint]);
