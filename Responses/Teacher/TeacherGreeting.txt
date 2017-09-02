@@ -1,0 +1,4 @@
+  "message":{
+  	"text":"Our team of teachers are experienced in a variety of yoga specializations. Here are a few of them..."
+  }
+

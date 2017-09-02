@@ -1,3 +1,3 @@
   "message":{
-  	"text":"Awesome, I will put you in contact with a live operator."
+  	"text":"Got it! We're handing you over to one of our studio admins. Your chat will automatically be handed back to the bot after 12 hours. Please let us know if you have ideas on how we can make this bot serve you better!"
   }
