@@ -56,6 +56,7 @@ console.log = function(value)
 {
     console.oldLog(value);
     process.$log = value;
+    console.log("$log: " +$log);
 };
 
 // ----------------------------------------------------------------------------
@@ -167,7 +168,7 @@ const GetTeachers = () => {
    var dir = 'Responses/Teacher/Teachers';
    var Teacher = [];
    fs.readdir(dir, (err, files) => {files.forEach(file => {console.log(file);})});
-   console.log("The Previous value is: " + $log); 
+   //console.log("The Previous value is: " + $log); 
    // Init Variables
    var i = 0;
    var ChosenTeacher = [];
