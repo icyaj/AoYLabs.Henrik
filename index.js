@@ -49,7 +49,15 @@ if (!FB_APP_SECRET) { throw new Error('missing FB_APP_SECRET') }
 
 const FB_VERIFY_TOKEN = process.env.FB_VERIFY_TOKEN;
 if (!FB_VERIFY_TOKEN) { throw new Error('missing FB_VERIFY_TOKEN') }
-                                        
+
+// This Rewrites Console.log & stores the previous console.log as $log 
+console.oldLog = console.log;
+console.log = function(value)
+{
+    console.oldLog(value);
+    window.$log = value;
+};
+
 // ----------------------------------------------------------------------------
 // Messenger API specific code
 
@@ -156,10 +164,10 @@ const CheckOpen = () => {
 // Randomises Teachers to output 3 For Teacher Card.
 const GetTeachers = () => {
    // Loads Teacher File Names.
-   this.dir = 'Responses/Teacher/Teachers';
-   this.Teacher = [];
-   fs.readdir(this.dir, (err, files) => {files.forEach(file => {GetTeachers.Teacher.push(file);});})
-   console.log(this.Teacher); 
+   dir = 'Responses/Teacher/Teachers';
+   Teacher = [];
+   fs.readdir(dir, (err, files) => {files.forEach(file => {console.log(file);})
+   console.log("The Previous value is: " + $log); 
    // Init Variables
    var i = 0;
    var ChosenTeacher = [];
