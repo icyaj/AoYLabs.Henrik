@@ -281,6 +281,12 @@ const actions = {
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
   
+  // Class Greeting Card
+  ClassGreeting(text) {
+    var content = GetText('./Responses/ClassTypes/ClassGreeting.txt', 'Class Greeting Card');
+    fbRichMessage(sessions[text.sessionId].fbid, content);
+  },
+  
   // Class Type Card
   ClassType(text) {
     var content = GetText('./Responses/ClassTypes/AllClassType.txt', 'Class Type Card');
