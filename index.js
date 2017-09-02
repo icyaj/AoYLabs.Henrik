@@ -164,8 +164,8 @@ const CheckOpen = () => {
 // Randomises Teachers to output 3 For Teacher Card.
 const GetTeachers = () => {
    // Loads Teacher File Names.
-   dir = 'Responses/Teacher/Teachers';
-   Teacher = [];
+   var dir = 'Responses/Teacher/Teachers';
+   var Teacher = [];
    fs.readdir(dir, (err, files) => {files.forEach(file => {console.log(file);})});
    console.log("The Previous value is: " + $log); 
    // Init Variables
