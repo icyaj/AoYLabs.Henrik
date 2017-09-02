@@ -50,15 +50,6 @@ if (!FB_APP_SECRET) { throw new Error('missing FB_APP_SECRET') }
 const FB_VERIFY_TOKEN = process.env.FB_VERIFY_TOKEN;
 if (!FB_VERIFY_TOKEN) { throw new Error('missing FB_VERIFY_TOKEN') }
 
-// This Rewrites Console.log & stores the previous console.log as $log 
-console.oldLog = console.log;
-console.log = function(value)
-{
-    console.oldLog(value);
-    process.$log = value;
-    console.log("$log: " +$log);
-};
-
 // ----------------------------------------------------------------------------
 // Messenger API specific code
 
