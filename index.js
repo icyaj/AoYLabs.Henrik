@@ -176,7 +176,7 @@ const GetTeachers = () => {
    console.log("The chosen teachers are: " + ChosenTeacher);
     
    // Now going to append the teacher cards together into one.
-   var content = (GetText("./Responses/Teacher/Teachers/" + ChosenTeacher[0] + ".txt","Fetching Teacher 1 Card") + ";" + GetText("./Responses/Teacher/Teachers/" + ChosenTeacher[1] + ".txt","Fetching Teacher 2 Card") + ";" + GetText("./Responses/Teacher/Teachers/" + ChosenTeacher[2] + ".txt","Fetching Teacher 3 Card") + ";");
+   var content = (GetText("./Responses/Teacher/Teachers/" + ChosenTeacher[0] + ".txt","Fetching Teacher 1 Card") + "," + GetText("./Responses/Teacher/Teachers/" + ChosenTeacher[1] + ".txt","Fetching Teacher 2 Card") + "," + GetText("./Responses/Teacher/Teachers/" + ChosenTeacher[2] + ".txt","Fetching Teacher 3 Card") + ",");
    return content; 
 };
       
