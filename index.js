@@ -343,6 +343,12 @@ const actions = {
     var content = GetText('./Responses/FAQ/NoPassAccount.txt', 'FAQ No Pass Account');
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
+  
+  // Shower FAQ
+  ShowerFAQ(text) {
+    var content = GetText('./Responses/FAQ/ShowerFAQ.txt', 'FAQ Shower');
+    fbRichMessage(sessions[text.sessionId].fbid, content);
+  },
     
   // Email Acknowledgment FAQ
   EmailAcknowledgmentFAQ(text) {
@@ -383,7 +389,6 @@ const actions = {
   // Ok
   Ok(text) {
     var content = GetText('./Responses/Ok/Ok.txt', 'Ok Card');
-    sleep.sleep(3);
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
 
@@ -395,6 +400,7 @@ const actions = {
   
   // Handover to Bot
   HandOverBot(text) {
+      // Sleep for 12 hours 
     sleep.sleep(43200);
     var userId = sessions[text.sessionId].fbid;
     delete sessions[text.sessionId].context; 
@@ -410,7 +416,7 @@ const actions = {
     fbHandOverMessage(sessions[text.sessionId].fbid, content, 'pass');
   },
 
-  // Handover to Bot (Realised That You Can't ask for BOT while in the Bot)
+// Handover to Bot (Realised That You Can't ask for BOT while in the Bot)
 //  HandOverLive(text) {
 //    var content = GetText('./Responses/Human/HandoverToBot.txt', 'Handover to Bot'); 
 //    fbHandOverMessage(sessions[text.sessionId].fbid, content);

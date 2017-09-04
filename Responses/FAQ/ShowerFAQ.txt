@@ -1,0 +1,3 @@
+"message":{
+  	"text":"Yes we have showers at the studio, Please bring your own towel."
+  }
