@@ -400,6 +400,12 @@ const actions = {
     var content = GetText('./Responses/FAQ/StudioShop.txt', 'FAQ Studio Shop');
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
+    
+  // Find Out More 
+  FindOutMore(text) {
+    var content = GetText('./Responses/FAQ/FindOutMore.txt', 'FAQ Find Out More');
+    fbRichMessage(sessions[text.sessionId].fbid, content);
+  },
 
   // Ok
   Ok(text) {

@@ -1,0 +1,16 @@
+  "message":{
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"Having been around since 2013, Art of Yoga is a boutique yoga studio offering a variety of classes including Hatha Yoga, Ashtanga Yoga, Vinyasa Flow, Yin Yoga and Prenatal Yoga.... Click the link below to find out more about Art Of Yoga.",
+        "buttons":[
+          {
+            "type":"web_url",
+            "url":"https://artofyoga.sg/about/",
+            "title":"Find Out More"
+          }
+        ]
+      }
+    }
+  }
