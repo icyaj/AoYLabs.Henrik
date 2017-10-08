@@ -1,0 +1,16 @@
+  "message":{
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"We have a merchandise shop at the studio as well as an online webshop. Click the link below to find out more.",
+        "buttons":[
+          {
+            "type":"web_url",
+            "url":"https://artofyoga.sg/webshop/",
+            "title":"Webshop"
+          }
+        ]
+      }
+    }
+  }

@@ -394,6 +394,12 @@ const actions = {
     var content = GetText('./Responses/FAQ/ClassCost.txt', 'FAQ Class Cost');
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
+    
+  // StudioShop 
+  StudioShopFAQ(text) {
+    var content = GetText('./Responses/FAQ/StudioShop.txt', 'FAQ Studio Shop');
+    fbRichMessage(sessions[text.sessionId].fbid, content);
+  },
 
   // Ok
   Ok(text) {
