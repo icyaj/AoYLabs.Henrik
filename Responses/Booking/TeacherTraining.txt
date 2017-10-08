@@ -1,0 +1,16 @@
+"message":{
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"button",
+        "text":"A certificate program designed by Swami Vivekananda Yoga Anusandhana Samsthana (sVYASA), a famous Yoga University whose work has a presence in 20 countries worldwide, with collaborative research projects in the U.S.A and U.K",
+        "buttons":[
+          {
+            "type":"web_url",
+            "url":"https://artofyoga.sg/yoga-instructor-certificate-course/",
+            "title":"VYASA Yoga Instructor Certificate Course"
+          }
+        ]
+      }
+    }
+  }

@@ -346,6 +346,12 @@ const actions = {
     var content = GetText('./Responses/Booking/FreeTrial.txt', 'FAQ Free Trial Class');
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
+
+  // Teacher Training
+  TeacherTraining(text) {
+    var content = GetText('./Responses/Booking/TeacherTraining.txt', 'Teacher Training');
+    fbRichMessage(sessions[text.sessionId].fbid, content);
+  },
   
   // No Pass Account FAQ
   NoPassAccountFAQ(text) {
