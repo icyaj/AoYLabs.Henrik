@@ -138,7 +138,7 @@ const CheckOpen = () => {
     var minute = moment().tz("Asia/Singapore").minute();
     
     // Response Static half
-    var open = 'Yes, we are currently open until';
+    var open = '"We are currently open until';
     var closed = 'Unfortunately we are currently closed & will open tomorrow at';
     
     // Logic to Test if Open or Closed.
@@ -266,7 +266,14 @@ const actions = {
     
   // Are You Open
   AreYouOpen(text) {
-    var Front = GetText('./Responses/OpeningHours/OpenClose.txt', 'Are You Open Card'); 
+    var Front = GetText('./Responses/OpeningHours/Open.txt', 'Are You Open Card'); 
+    var content = Front + CheckOpen() + '" }';
+    fbRichMessage(sessions[text.sessionId].fbid, content);
+  },
+    
+  // Are You Closed
+  AreYouClosed(text) {
+    var Front = GetText('./Responses/OpeningHours/Close.txt', 'Are You Closed Card'); 
     var content = Front + CheckOpen() + '" }';
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
