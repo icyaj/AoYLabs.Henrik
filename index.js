@@ -138,7 +138,7 @@ const CheckOpen = () => {
     var minute = moment().tz("Asia/Singapore").minute();
     
     // Response Static half
-    var open = '"We are currently open until';
+    var open = 'We are currently open until';
     var closed = 'Unfortunately we are currently closed & will open tomorrow at';
     
     // Logic to Test if Open or Closed.
@@ -168,7 +168,7 @@ const GetTeachers = () => {
    while (i < 3) {
     // Gets a random number between 1 and the Teacher Length.
     var Randint = Math.floor((Math.random() * Teacher.length));
-    console.log("Randint: " + Randint);
+    //console.log("Randint: " + Randint);
     if ( ChosenTeacher.indexOf( Teacher[Randint] ) === -1 ) { 
         ChosenTeacher.push(Teacher[Randint]);
         console.log("Randint: " + Randint);
@@ -313,7 +313,7 @@ const actions = {
     var Front = GetText('./Responses/Teacher/TeacherCardFront.txt', 'Teacher Card Front'); 
     var Back = GetText('./Responses/Teacher/TeacherCardBack.txt', 'Teacher Card Back');
     var content = Front + GetTeachers() + Back;
-    console.log(content);
+    //console.log(content);
     fbRichMessage(sessions[text.sessionId].fbid, content);
   },
     
