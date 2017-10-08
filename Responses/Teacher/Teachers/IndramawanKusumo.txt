@@ -1,0 +1,15 @@
+{
+            "title": "Indramawan Kusumo",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/10/indra.jpg",
+            "subtitle": "Indramawan Kusumo’s attitude is simple; that to reach depth, one does not have to travel far. We already have all the solutions and improvements we seek, but we overlook them because we make ourselves believe that they have to be beyond our reach. Indra’s Yoga poses do not challenge one’s limit – they invite one to explore one’s self. In his classes, you do less but get more results. What separates Indra’s teaching style from others is that he incorporates somatic self-adjustments in the asanas, that enable practitioners to release tension and open the body more efficiently, hence the many positive reviews!",
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/teachers/indramawan-kusumo/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg/teachers/indramawan-kusumo/"            
+              }
+            ]        
+          }

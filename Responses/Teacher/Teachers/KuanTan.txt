@@ -1,0 +1,15 @@
+{
+            "title": "Kuan Tan",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/06/kuan-bio.jpg",
+            "subtitle": "Kuan Tan started her yoga journey in 2004. Like many, it began as a physical activity. Gradually, she loves the “me” time on the mat when it allows her to be grounded and be connected with her inner self. Yoga teaches her to live life with strength, compassion and bliss.",
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/teachers/kuan-tan/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg/teachers/kuan-tan/"            
+              }
+            ]        
+          }

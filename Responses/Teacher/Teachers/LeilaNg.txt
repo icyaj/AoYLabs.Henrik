@@ -1,0 +1,15 @@
+{
+            "title": "Leila Ng",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/09/IMG_2890.png",
+            "subtitle": "Leila Ng’s journey with yoga began more than ten years ago with a gym in Singapore. Since then, yoga has become a huge part of her, physically, mentally and emotionally; it has become her way of life. She strongly believes yoga is for everyone and anyone and aspires to spread this knowledge and love to as many people as possible.",
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/teachers/leila-ng/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg/teachers/leila-ng/"            
+              }
+            ]        
+          }

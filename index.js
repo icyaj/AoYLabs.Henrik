@@ -156,7 +156,9 @@ const CheckOpen = () => {
 // Randomises Teachers to output 3 For Teacher Card..
 const GetTeachers = () => {
    // Loads Teacher File Names.
-   var Teacher = ["ArtiDaryanani","AthenaBakar","CandyDang","CherylTan","DavidRogers","DerrisChew","HazelKok","JoyTan","KarenTan","NadiraMohsin","NatalieLim","ShamnaKrishnamurthy","ShaniceSoh","SheelaCheong"];
+   var Teacher = ["ArtiDaryanani","AthenaBakar","CandyDang","CherylTan","DerrisChew","HazelKok","IndramawanKusumo","JoyTan","KarenTan","KuanTan","LeilaNg","NadiraMohsin","NatalieLim","PritiSanghavi","ShaniceSoh","SheelaCheong"];
+   var RetiredTeachers =
+       ["DavidRogers","ShamnaKrishnamurthy"];
 
    // Init Variables
    var i = 0;

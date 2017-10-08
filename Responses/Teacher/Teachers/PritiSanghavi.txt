@@ -1,0 +1,15 @@
+{
+            "title": "Priti Sanghavi",
+            "image_url": "https://artofyoga.sg/wp-content/uploads/2017/10/Priti.jpg",
+            "subtitle": "Priti Sanghavi is a motivated teacher with advanced training in yoga and specialisation in Hatha yoga principles. She enjoys inspiring others to improve health and wellbeing and commit to long-term health and fitness goals. Working with beginners is something Priti is especially good at as she works patiently with them to ensure an in-depth understanding of different breathing techniques and asana. Alongside working with students with specific medical conditions, Priti also enjoys conducting community yoga classes that help to bring the neighbourhood together in a fun and enjoyable way.",
+            "buttons": [
+              {
+                "title": "Details",
+                "type": "web_url",
+                "url": "https://artofyoga.sg/teachers/priti-sanghavi/",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://artofyoga.sg/teachers/priti-sanghavi/"            
+              }
+            ]        
+          }
